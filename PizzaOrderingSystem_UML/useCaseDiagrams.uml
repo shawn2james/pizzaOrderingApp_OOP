@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_h4vr4PiwEe2bE_-BfWB_Vg" name="PizzaOrderingSystem_Java">
+  <packagedElement xmi:type="uml:Actor" xmi:id="_oH8ZEPiwEe2bE_-BfWB_Vg" name="Customer"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_qLrycPiwEe2bE_-BfWB_Vg" name="Staff"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_sfg2QPiwEe2bE_-BfWB_Vg" name="System">
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_8i6BYPiwEe2bE_-BfWB_Vg" name="Place pizza and drink orders"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_F9cCIPixEe2bE_-BfWB_Vg" name="Edit order">
+      <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_tWpdIPixEe2bE_-BfWB_Vg" name="ExtensionPoint1"/>
+      <include xmi:type="uml:Include" xmi:id="_sprpcPixEe2bE_-BfWB_Vg" addition="_8i6BYPiwEe2bE_-BfWB_Vg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_HUTHYPixEe2bE_-BfWB_Vg" name="Delete orders">
+      <extend xmi:type="uml:Extend" xmi:id="_tWnA4PixEe2bE_-BfWB_Vg" extendedCase="_F9cCIPixEe2bE_-BfWB_Vg" extensionLocation="_tWpdIPixEe2bE_-BfWB_Vg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_I7gVwPixEe2bE_-BfWB_Vg" name="Confirm order">
+      <include xmi:type="uml:Include" xmi:id="_ujUEkPixEe2bE_-BfWB_Vg" addition="_8i6BYPiwEe2bE_-BfWB_Vg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_FuKakPiyEe2bE_-BfWB_Vg" name="View order summary"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_HN02gPiyEe2bE_-BfWB_Vg" name="View details of each order"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_IfWv0PiyEe2bE_-BfWB_Vg" name="Calculate total sales"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_PgyLMPiyEe2bE_-BfWB_Vg" name="Keep track of items in inventory"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_Cgq60PyXEe2sm__QbRqI5Q" name="Create new pizzas and drinks"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_XJL28PyXEe2sm__QbRqI5Q" name="Edit/Delete items in the menu"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_db-DoPyXEe2sm__QbRqI5Q" name="Save the items"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_UHIEMPiyEe2bE_-BfWB_Vg" memberEnd="_UHJSUPiyEe2bE_-BfWB_Vg _UHJ5YPiyEe2bE_-BfWB_Vg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_UHIrQPiyEe2bE_-BfWB_Vg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_UHIrQfiyEe2bE_-BfWB_Vg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_UHJSUPiyEe2bE_-BfWB_Vg" name="staff" type="_qLrycPiwEe2bE_-BfWB_Vg" association="_UHIEMPiyEe2bE_-BfWB_Vg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_UHJ5YPiyEe2bE_-BfWB_Vg" name="view order summary" type="_FuKakPiyEe2bE_-BfWB_Vg" association="_UHIEMPiyEe2bE_-BfWB_Vg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_UrQE8PiyEe2bE_-BfWB_Vg" memberEnd="_UrQsAviyEe2bE_-BfWB_Vg _UrRTEPiyEe2bE_-BfWB_Vg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_UrQsAPiyEe2bE_-BfWB_Vg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_UrQsAfiyEe2bE_-BfWB_Vg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_UrQsAviyEe2bE_-BfWB_Vg" name="place pizza and drink orders" type="_8i6BYPiwEe2bE_-BfWB_Vg" association="_UrQE8PiyEe2bE_-BfWB_Vg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_UrRTEPiyEe2bE_-BfWB_Vg" name="customer" type="_oH8ZEPiwEe2bE_-BfWB_Vg" association="_UrQE8PiyEe2bE_-BfWB_Vg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_Z8Az8PiyEe2bE_-BfWB_Vg" memberEnd="_Z8DQMfiyEe2bE_-BfWB_Vg _Z8EeUPiyEe2bE_-BfWB_Vg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Z8CpIPiyEe2bE_-BfWB_Vg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Z8DQMPiyEe2bE_-BfWB_Vg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_Z8DQMfiyEe2bE_-BfWB_Vg" name="calculate total sales" type="_IfWv0PiyEe2bE_-BfWB_Vg" association="_Z8Az8PiyEe2bE_-BfWB_Vg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_Z8EeUPiyEe2bE_-BfWB_Vg" name="staff" type="_qLrycPiwEe2bE_-BfWB_Vg" association="_Z8Az8PiyEe2bE_-BfWB_Vg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_amf7YPiyEe2bE_-BfWB_Vg" memberEnd="_amiXoPiyEe2bE_-BfWB_Vg _ami-sPiyEe2bE_-BfWB_Vg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_amhJgPiyEe2bE_-BfWB_Vg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_amhwkPiyEe2bE_-BfWB_Vg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_amiXoPiyEe2bE_-BfWB_Vg" name="view details of each order" type="_HN02gPiyEe2bE_-BfWB_Vg" association="_amf7YPiyEe2bE_-BfWB_Vg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_ami-sPiyEe2bE_-BfWB_Vg" name="staff" type="_qLrycPiwEe2bE_-BfWB_Vg" association="_amf7YPiyEe2bE_-BfWB_Vg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_bIU2EPiyEe2bE_-BfWB_Vg" memberEnd="_bIWEMPiyEe2bE_-BfWB_Vg _bIWrQPiyEe2bE_-BfWB_Vg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_bIVdIPiyEe2bE_-BfWB_Vg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_bIVdIfiyEe2bE_-BfWB_Vg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_bIWEMPiyEe2bE_-BfWB_Vg" name="keep track of items in inventory" type="_PgyLMPiyEe2bE_-BfWB_Vg" association="_bIU2EPiyEe2bE_-BfWB_Vg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_bIWrQPiyEe2bE_-BfWB_Vg" name="staff" type="_qLrycPiwEe2bE_-BfWB_Vg" association="_bIU2EPiyEe2bE_-BfWB_Vg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_MTCz0PyXEe2sm__QbRqI5Q" memberEnd="_MTEpAPyXEe2sm__QbRqI5Q _MTEpAfyXEe2sm__QbRqI5Q">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_MTEB8PyXEe2sm__QbRqI5Q" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_MTEB8fyXEe2sm__QbRqI5Q" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_MTEpAPyXEe2sm__QbRqI5Q" name="create new pizzas and drinks" type="_Cgq60PyXEe2sm__QbRqI5Q" association="_MTCz0PyXEe2sm__QbRqI5Q"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_MTEpAfyXEe2sm__QbRqI5Q" name="staff" type="_qLrycPiwEe2bE_-BfWB_Vg" association="_MTCz0PyXEe2sm__QbRqI5Q"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_gDL9gPyXEe2sm__QbRqI5Q" memberEnd="_gDNysPyXEe2sm__QbRqI5Q _gDOZwPyXEe2sm__QbRqI5Q">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_gDMkkPyXEe2sm__QbRqI5Q" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gDNLoPyXEe2sm__QbRqI5Q" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_gDNysPyXEe2sm__QbRqI5Q" name="edit/delete items in the menu" type="_XJL28PyXEe2sm__QbRqI5Q" association="_gDL9gPyXEe2sm__QbRqI5Q"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_gDOZwPyXEe2sm__QbRqI5Q" name="staff" type="_qLrycPiwEe2bE_-BfWB_Vg" association="_gDL9gPyXEe2sm__QbRqI5Q"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_gjDJUPyXEe2sm__QbRqI5Q" memberEnd="_gjE-gfyXEe2sm__QbRqI5Q _gjFlkPyXEe2sm__QbRqI5Q">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_gjEXcPyXEe2sm__QbRqI5Q" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gjE-gPyXEe2sm__QbRqI5Q" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_gjE-gfyXEe2sm__QbRqI5Q" name="save the items" type="_db-DoPyXEe2sm__QbRqI5Q" association="_gjDJUPyXEe2sm__QbRqI5Q"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_gjFlkPyXEe2sm__QbRqI5Q" name="staff" type="_qLrycPiwEe2bE_-BfWB_Vg" association="_gjDJUPyXEe2sm__QbRqI5Q"/>
+  </packagedElement>
+</uml:Model>
