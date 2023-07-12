@@ -1,4 +1,5 @@
-WINDOWS:
+## NOTES
+#### WINDOWS:
 - Customer / staff selection screen
 For customers:
 - Food Menu window
@@ -19,7 +20,7 @@ For staff:
 - 
 
 
-CLASSES:
+#### CLASSES:
 - MainFrame
 - Controller
 - DataStorage
