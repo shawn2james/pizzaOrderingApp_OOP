@@ -26,22 +26,22 @@ CLASSES:
 	- orders
 	- staffs - type-Vector<Staff>
 	- items - type-Vector<Item>
-	= addItem()
-	= editItem()
-	= removeItem()	
+	* addItem()
+	* editItem()
+	* removeItem()	
 - OrderList 
 	- orders: type-Vector<Order>
 	- totalSales: type-double
-	= addOrder()
-	= removeOrder(orderNo)
-	= editOrder(orderNo)
+	* addOrder()
+	* removeOrder(orderNo)
+	* editOrder(orderNo)
 - Order
 	- orderNo: type-int
 	- pizzas: type-Vector<Pizza>
 	- drinks: type-Vector<Drink>
 	- totalPrice: type-double
-	= addItem()
-	= removeItem()
+	* addItem()
+	* removeItem()
 - Item
 	- name: type-String
 	- price: type-double
@@ -54,9 +54,9 @@ CLASSES:
 - Staff
 	- username: String
 	- password: String
-	= addItem()
-	= editItem()
-	= removeItem()
+	* addItem()
+	* editItem()
+	* removeItem()
 
 GENERAL NOTES:
 - Pizza and drink categories in menu
