@@ -48,10 +48,14 @@ For staff:
 	- price: type-double
 - Pizza (inherits from Item)
 	- toppings: type-List<String>
+	- size: type-Char (S, M or L)
 - Drink (inherits from Item)
 	- iceLevel: type-int => 0, 25, 50, 75
 - Inventory
 	- toppings: List<String>
+	- quantities: List<Int>
+	* add(String topping, int qty)
+	* remove(String topping, int qty)
 - Staff
 	- username: String
 	- password: String
