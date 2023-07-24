@@ -1,5 +1,7 @@
 package gui;
 
-public class StaffLoginScreen { 
+import javax.swing.JPanel;
+
+public class StaffLoginScreen extends JPanel { 
 
 }
