@@ -4,7 +4,7 @@
     <packageImport xmi:type="uml:PackageImport" xmi:id="_eUe0UCBXEe6AFdXvRKMkMw">
       <importedPackage xmi:type="uml:Profile" href="pathmap://Papyrus_JAVA_PROFILES/java.profile.uml#_6TYLMN0yEd6P1qtlpBOZyg"/>
     </packageImport>
-    <packagedElement xmi:type="uml:Package" xmi:id="_sx8Y4CBWEe6AFdXvRKMkMw" name="System">
+    <packagedElement xmi:type="uml:Package" xmi:id="_sx8Y4CBWEe6AFdXvRKMkMw" name="system">
       <packagedElement xmi:type="uml:Class" xmi:id="_ORRQgCYXEe6Y74zaMxOMLA" name="SelectionScreen"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_SbvF0CYXEe6Y74zaMxOMLA" name="MenuScreen"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_YgfdkCYXEe6Y74zaMxOMLA" name="CustomizeScreen"/>
