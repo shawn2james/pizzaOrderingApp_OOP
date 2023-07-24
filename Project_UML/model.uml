@@ -154,7 +154,6 @@
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_KuvEACkvEe64DqbVUFU4Fg" name="MainFrame">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_W-GR8CkxEe64DqbVUFU4Fg" name="controller" type="_L1vIUCkvEe64DqbVUFU4Fg" association="_W-FD0CkxEe64DqbVUFU4Fg"/>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_Zxv6wCkwEe64DqbVUFU4Fg" name="getController" visibility="public"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_mQky8CkwEe64DqbVUFU4Fg" name="showSelectionScreen"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_osKroCkwEe64DqbVUFU4Fg" name="showMenuScreen"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_p2E6ACkwEe64DqbVUFU4Fg" name="showCustomizeScreen"/>
@@ -262,7 +261,6 @@
   <java:JavaProperty xmi:id="_0wKQ8CYaEe6Y74zaMxOMLA" base_Property="_y_N3wCYaEe6Y74zaMxOMLA"/>
   <java:JavaProperty xmi:id="__l984CYaEe6Y74zaMxOMLA" base_Property="_7u1TQCYaEe6Y74zaMxOMLA"/>
   <java:JavaProperty xmi:id="_D5K3cCYbEe6Y74zaMxOMLA" base_Property="_CVNxYCYbEe6Y74zaMxOMLA"/>
-  <java:JavaMethod xmi:id="_lfrhgCkwEe64DqbVUFU4Fg" base_Operation="_Zxv6wCkwEe64DqbVUFU4Fg"/>
   <java:JavaMethod xmi:id="_1QERECkwEe64DqbVUFU4Fg" base_Operation="_0CY9ACkwEe64DqbVUFU4Fg"/>
   <java:JavaMethod xmi:id="_1_WY8CkwEe64DqbVUFU4Fg" base_Operation="_zN9PYCkwEe64DqbVUFU4Fg"/>
   <java:JavaMethod xmi:id="_8mqrMCkwEe64DqbVUFU4Fg" base_Operation="_xlPlICkwEe64DqbVUFU4Fg"/>
