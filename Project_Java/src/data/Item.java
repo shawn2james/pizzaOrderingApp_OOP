@@ -5,23 +5,11 @@ public class Item {
 	/**
 	 * 
 	 */
-	private double price;
+	private String name;
 	/**
 	 * 
 	 */
-	private String name;
-	/**
-	 * Getter of price
-	 */
-	public double getPrice() {
-	 	 return price; 
-	}
-	/**
-	 * Setter of price
-	 */
-	public void setPrice(double price) { 
-		 this.price = price; 
-	}
+	private double price;
 	/**
 	 * Getter of name
 	 */
@@ -33,6 +21,18 @@ public class Item {
 	 */
 	public void setName(String name) { 
 		 this.name = name; 
+	}
+	/**
+	 * Getter of price
+	 */
+	public double getPrice() {
+	 	 return price; 
+	}
+	/**
+	 * Setter of price
+	 */
+	public void setPrice(double price) { 
+		 this.price = price; 
 	} 
 
 }

@@ -9,12 +9,15 @@ public class DataStorage {
 	/**
 	 * 
 	 */
-	private List<Order> orders;
+	public Controller controller;
 	/**
 	 * 
 	 */
-	public Controller controller;
 	public Order order;
+	/**
+	 * 
+	 */
+	private List<Order> orders;
 	/**
 	 * 
 	 */
@@ -22,19 +25,15 @@ public class DataStorage {
 	/**
 	 * 
 	 */
+	public List<Drink> drinks;
+	/**
+	 * 
+	 */
+	public List<Pizza> pizzas;
+	/**
+	 * 
+	 */
 	private List<Staff> staffs;
-	/**
-	 * Getter of orders
-	 */
-	public List<Order> getOrders() {
-	 	 return orders; 
-	}
-	/**
-	 * Setter of orders
-	 */
-	public void setOrders(List<Order> orders) { 
-		 this.orders = orders; 
-	}
 	/**
 	 * Getter of controller
 	 */
@@ -60,6 +59,18 @@ public class DataStorage {
 		 this.order = order; 
 	}
 	/**
+	 * Getter of orders
+	 */
+	public List<Order> getOrders() {
+	 	 return orders; 
+	}
+	/**
+	 * Setter of orders
+	 */
+	public void setOrders(List<Order> orders) { 
+		 this.orders = orders; 
+	}
+	/**
 	 * Getter of staff
 	 */
 	public Staff getStaff() {
@@ -70,6 +81,30 @@ public class DataStorage {
 	 */
 	public void setStaff(Staff staff) { 
 		 this.staff = staff; 
+	}
+	/**
+	 * Getter of drinks
+	 */
+	public List<Drink> getDrinks() {
+	 	 return drinks; 
+	}
+	/**
+	 * Setter of drinks
+	 */
+	public void setDrinks(List<Drink> drinks) { 
+		 this.drinks = drinks; 
+	}
+	/**
+	 * Getter of pizzas
+	 */
+	public List<Pizza> getPizzas() {
+	 	 return pizzas; 
+	}
+	/**
+	 * Setter of pizzas
+	 */
+	public void setPizzas(List<Pizza> pizzas) { 
+		 this.pizzas = pizzas; 
 	}
 	/**
 	 * Getter of staffs
@@ -85,9 +120,10 @@ public class DataStorage {
 	}
 	/**
 	 * 
-	 * @param order 
+	 * @param newOrder 
+	 * @param orderNo 
 	 */
-	public void addOrder(Order order) { 
+	public void editOrder(Order newOrder, int orderNo) { 
 		// TODO Auto-generated method
 	 }
 	/**
@@ -100,10 +136,23 @@ public class DataStorage {
 	 }
 	/**
 	 * 
-	 * @param orderNo 
-	 * @param newOrder 
+	 * @param newItem 
 	 */
-	public void editOrder(int orderNo, Order newOrder) { 
+	public void addMenuItem(Item newItem) { 
+		// TODO Auto-generated method
+	 }
+	/**
+	 * 
+	 * @param item 
+	 */
+	public void removeMenuItem(Item item) { 
+		// TODO Auto-generated method
+	 }
+	/**
+	 * 
+	 * @param order 
+	 */
+	public void addOrder(Order order) { 
 		// TODO Auto-generated method
 	 }
 	/**

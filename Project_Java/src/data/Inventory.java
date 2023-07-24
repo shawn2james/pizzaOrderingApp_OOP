@@ -38,10 +38,10 @@ public class Inventory {
 	}
 	/**
 	 * 
-	 * @param topping 
 	 * @param qty 
+	 * @param topping 
 	 */
-	public void add(String topping, int qty) { 
+	public void add(int qty, String topping) { 
 		// TODO Auto-generated method
 	 }
 	/**

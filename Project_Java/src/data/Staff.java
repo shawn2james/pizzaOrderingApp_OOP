@@ -36,27 +36,19 @@ public class Staff {
 	}
 	/**
 	 * 
-	 * @param orderNo 
 	 * @param itemIndex 
+	 * @param orderNo 
+	 */
+	public void removeOrderItem(int itemIndex, int orderNo) { 
+		// TODO Auto-generated method
+	 }
+	/**
+	 * 
+	 * @param orderNo 
 	 * @param editedItem 
-	 */
-	protected void editItem(int orderNo, int itemIndex, Item editedItem) { 
-		// TODO Auto-generated method
-	 }
-	/**
-	 * 
-	 * @param orderNo 
-	 * @param newItem 
-	 */
-	public void addItem(int orderNo, Item newItem) { 
-		// TODO Auto-generated method
-	 }
-	/**
-	 * 
 	 * @param itemIndex 
-	 * @param orderNo 
 	 */
-	public void removeItem(int itemIndex, int orderNo) { 
+	public void editOrderItem(int orderNo, Item editedItem, int itemIndex) { 
 		// TODO Auto-generated method
 	 } 
 

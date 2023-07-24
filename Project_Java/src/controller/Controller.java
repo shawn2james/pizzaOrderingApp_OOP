@@ -9,6 +9,16 @@ public class Controller {
 
 	/**
 	 * 
+	 * @param orderNo 
+	 * @return 
+	 */
+	public Order getOrder(int orderNo) { 
+		// TODO Auto-generated method
+		return null;
+	 }
+
+	/**
+	 * 
 	 * @return 
 	 */
 	public Order getAllOrders() { 
@@ -21,16 +31,6 @@ public class Controller {
 	 * @return 
 	 */
 	public List<Staff> getAllStaffs() { 
-		// TODO Auto-generated method
-		return null;
-	 }
-
-	/**
-	 * 
-	 * @param orderNo 
-	 * @return 
-	 */
-	public Order getOrder(int orderNo) { 
 		// TODO Auto-generated method
 		return null;
 	 } 

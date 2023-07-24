@@ -24,28 +24,7 @@ public class MainFrame {
 	/**
 	 * 
 	 */
-	public void showOrderScreen() { 
-		// TODO Auto-generated method
-	 }
-
-	/**
-	 * 
-	 */
-	public void showMenuScreen() { 
-		// TODO Auto-generated method
-	 }
-
-	/**
-	 * 
-	 */
-	public void showStaffLoginScreen() { 
-		// TODO Auto-generated method
-	 }
-
-	/**
-	 * 
-	 */
-	public void showStaffMainScreen() { 
+	public void showSelectionScreen() { 
 		// TODO Auto-generated method
 	 }
 
@@ -63,6 +42,27 @@ public class MainFrame {
 	/**
 	 * 
 	 */
+	public void showOrderScreen() { 
+		// TODO Auto-generated method
+	 }
+
+	/**
+	 * 
+	 */
+	public void showStaffMainScreen() { 
+		// TODO Auto-generated method
+	 }
+
+	/**
+	 * 
+	 */
+	public void showStaffLoginScreen() { 
+		// TODO Auto-generated method
+	 }
+
+	/**
+	 * 
+	 */
 	public void showInventoryScreen() { 
 		// TODO Auto-generated method
 	 }
@@ -70,7 +70,7 @@ public class MainFrame {
 	/**
 	 * 
 	 */
-	public void showSelectionScreen() { 
+	public void showMenuScreen() { 
 		// TODO Auto-generated method
 	 } 
 

@@ -22,6 +22,14 @@
         <ownedAttribute xmi:type="uml:Property" xmi:id="_8nofESkxEe64DqbVUFU4Fg" name="controller" type="_L1vIUCkvEe64DqbVUFU4Fg" association="_8nmp4CkxEe64DqbVUFU4Fg"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_b5vIsCk1Ee64DqbVUFU4Fg" name="order" type="_BUzvMCYZEe6Y74zaMxOMLA" association="_b5sscCk1Ee64DqbVUFU4Fg"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_jT50MSk1Ee64DqbVUFU4Fg" name="staff" type="_BtZY4CYaEe6Y74zaMxOMLA" association="_jT4mECk1Ee64DqbVUFU4Fg"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_tlZYQCncEe64DqbVUFU4Fg" name="pizzas" type="_qd7MICYaEe6Y74zaMxOMLA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_0BWIACncEe64DqbVUFU4Fg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_0BpqACncEe64DqbVUFU4Fg" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_uzzsICncEe64DqbVUFU4Fg" name="drinks" type="_sOkqYCYaEe6Y74zaMxOMLA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_13dVECncEe64DqbVUFU4Fg" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_13hmgCncEe64DqbVUFU4Fg" value="*"/>
+        </ownedAttribute>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_VDPeICYYEe6Y74zaMxOMLA" name="addOrder">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_Op7qECk2Ee64DqbVUFU4Fg" name="order" type="_BUzvMCYZEe6Y74zaMxOMLA"/>
         </ownedOperation>
@@ -38,6 +46,12 @@
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_vNiUoCk1Ee64DqbVUFU4Fg" name="totalSales" direction="return">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
           </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_i-GXgCneEe64DqbVUFU4Fg" name="addMenuItem">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_uLjHYCneEe64DqbVUFU4Fg" name="newItem" type="_cB9R0CYaEe6Y74zaMxOMLA"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_k7hGcCneEe64DqbVUFU4Fg" name="removeMenuItem">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_qbogECneEe64DqbVUFU4Fg" name="item" type="_cB9R0CYaEe6Y74zaMxOMLA"/>
         </ownedOperation>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_BUzvMCYZEe6Y74zaMxOMLA" name="Order">
@@ -73,13 +87,7 @@
         <ownedAttribute xmi:type="uml:Property" xmi:id="_NPKL4CYaEe6Y74zaMxOMLA" name="password" visibility="private">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedAttribute>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_SJkQYCYaEe6Y74zaMxOMLA" name="addItem">
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_QCwzUCk4Ee64DqbVUFU4Fg" name="orderNo">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
-          </ownedParameter>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_SckjUCk4Ee64DqbVUFU4Fg" name="newItem" type="_cB9R0CYaEe6Y74zaMxOMLA"/>
-        </ownedOperation>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_UpwVMCYaEe6Y74zaMxOMLA" name="editItem" visibility="protected">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_UpwVMCYaEe6Y74zaMxOMLA" name="editOrderItem" visibility="public">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_O2AaYCk6Ee64DqbVUFU4Fg" name="orderNo">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
           </ownedParameter>
@@ -88,7 +96,7 @@
           </ownedParameter>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_camSsCk4Ee64DqbVUFU4Fg" name="editedItem" type="_cB9R0CYaEe6Y74zaMxOMLA"/>
         </ownedOperation>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_WnudwCYaEe6Y74zaMxOMLA" name="removeItem">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_WnudwCYaEe6Y74zaMxOMLA" name="removeOrderItem">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_JFDIYCk6Ee64DqbVUFU4Fg" name="orderNo">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
           </ownedParameter>
@@ -243,7 +251,6 @@
   <java:JavaClass xmi:id="_DFNgYCYaEe6Y74zaMxOMLA" base_Classifier="_BtZY4CYaEe6Y74zaMxOMLA"/>
   <java:JavaProperty xmi:id="_J-Y-sCYaEe6Y74zaMxOMLA" base_Property="_G21X4CYaEe6Y74zaMxOMLA"/>
   <java:JavaProperty xmi:id="_QVPMACYaEe6Y74zaMxOMLA" base_Property="_NPKL4CYaEe6Y74zaMxOMLA"/>
-  <java:JavaMethod xmi:id="_URsagCYaEe6Y74zaMxOMLA" base_Operation="_SJkQYCYaEe6Y74zaMxOMLA"/>
   <java:JavaMethod xmi:id="_WR5XsCYaEe6Y74zaMxOMLA" base_Operation="_UpwVMCYaEe6Y74zaMxOMLA"/>
   <java:JavaMethod xmi:id="_Xw4eMCYaEe6Y74zaMxOMLA" base_Operation="_WnudwCYaEe6Y74zaMxOMLA"/>
   <java:JavaClass xmi:id="_dVR64CYaEe6Y74zaMxOMLA" base_Classifier="_cB9R0CYaEe6Y74zaMxOMLA"/>
@@ -272,4 +279,6 @@
   <java:JavaMethod xmi:id="_ZGUCACk5Ee64DqbVUFU4Fg" base_Operation="_Iy420Ck5Ee64DqbVUFU4Fg"/>
   <java:JavaProperty xmi:id="_3lrugCk5Ee64DqbVUFU4Fg" base_Property="_0OrWcCk5Ee64DqbVUFU4Fg"/>
   <java:JavaMethod xmi:id="_47YWICk5Ee64DqbVUFU4Fg" base_Operation="_hV7HwCk5Ee64DqbVUFU4Fg"/>
+  <java:JavaProperty xmi:id="_xqx5QCncEe64DqbVUFU4Fg" base_Property="_tlZYQCncEe64DqbVUFU4Fg"/>
+  <java:JavaProperty xmi:id="_2p-XICncEe64DqbVUFU4Fg" base_Property="_uzzsICncEe64DqbVUFU4Fg"/>
 </xmi:XMI>

@@ -7,11 +7,7 @@ public class Order {
 	/**
 	 * 
 	 */
-	public Drink drink;
-	/**
-	 * 
-	 */
-	public Pizza pizza;
+	private double totalPrice;
 	/**
 	 * 
 	 */
@@ -19,38 +15,30 @@ public class Order {
 	/**
 	 * 
 	 */
-	public List<Item> items;
+	public Drink drink;
 	/**
 	 * 
 	 */
-	private double totalPrice;
+	public List<Item> items;
 	/**
 	 * 
 	 */
 	private int orderNo;
 	/**
-	 * Getter of drink
+	 * 
 	 */
-	public Drink getDrink() {
-	 	 return drink; 
+	public Pizza pizza;
+	/**
+	 * Getter of totalPrice
+	 */
+	public double getTotalPrice() {
+	 	 return totalPrice; 
 	}
 	/**
-	 * Setter of drink
+	 * Setter of totalPrice
 	 */
-	public void setDrink(Drink drink) { 
-		 this.drink = drink; 
-	}
-	/**
-	 * Getter of pizza
-	 */
-	public Pizza getPizza() {
-	 	 return pizza; 
-	}
-	/**
-	 * Setter of pizza
-	 */
-	public void setPizza(Pizza pizza) { 
-		 this.pizza = pizza; 
+	public void setTotalPrice(double totalPrice) { 
+		 this.totalPrice = totalPrice; 
 	}
 	/**
 	 * Getter of item
@@ -65,6 +53,18 @@ public class Order {
 		 this.item = item; 
 	}
 	/**
+	 * Getter of drink
+	 */
+	public Drink getDrink() {
+	 	 return drink; 
+	}
+	/**
+	 * Setter of drink
+	 */
+	public void setDrink(Drink drink) { 
+		 this.drink = drink; 
+	}
+	/**
 	 * Getter of items
 	 */
 	public List<Item> getItems() {
@@ -75,18 +75,6 @@ public class Order {
 	 */
 	public void setItems(List<Item> items) { 
 		 this.items = items; 
-	}
-	/**
-	 * Getter of totalPrice
-	 */
-	public double getTotalPrice() {
-	 	 return totalPrice; 
-	}
-	/**
-	 * Setter of totalPrice
-	 */
-	public void setTotalPrice(double totalPrice) { 
-		 this.totalPrice = totalPrice; 
 	}
 	/**
 	 * Getter of orderNo
@@ -101,17 +89,29 @@ public class Order {
 		 this.orderNo = orderNo; 
 	}
 	/**
-	 * 
-	 * @param item 
+	 * Getter of pizza
 	 */
-	public void addItem(Item item) { 
-		// TODO Auto-generated method
-	 }
+	public Pizza getPizza() {
+	 	 return pizza; 
+	}
+	/**
+	 * Setter of pizza
+	 */
+	public void setPizza(Pizza pizza) { 
+		 this.pizza = pizza; 
+	}
 	/**
 	 * 
 	 * @param itemIndex 
 	 */
 	public void removeItem(int itemIndex) { 
+		// TODO Auto-generated method
+	 }
+	/**
+	 * 
+	 * @param item 
+	 */
+	public void addItem(Item item) { 
 		// TODO Auto-generated method
 	 } 
 
