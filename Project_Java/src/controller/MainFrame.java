@@ -11,6 +11,7 @@ import data.Staff;
 import gui.CustomizeScreen;
 import gui.MenuScreen;
 import gui.SelectionScreen;
+import gui.StaffLoginScreen;
 import gui.ViewCartScreen;
 
 public class MainFrame extends JFrame {
@@ -64,7 +65,9 @@ public class MainFrame extends JFrame {
 	 }
 
 	public void showStaffLoginScreen() { 
-		// TODO Auto-generated method
+		StaffLoginScreen s5 = new StaffLoginScreen(this);
+		this.add(s5, "StaffLogin");
+		this.card.show(this.getContentPane(), "StaffLogin");
 	 }
 
 	public void showInventoryScreen() { 

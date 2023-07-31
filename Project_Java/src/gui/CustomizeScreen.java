@@ -42,6 +42,7 @@ public class CustomizeScreen extends JPanel {
 			lblSize.setBounds(100, 150, 600, 40);
 			add(lblSize);
 			
+			
 			JLabel lblIceLevel = new JLabel("Ice Level:");
 			lblIceLevel.setHorizontalAlignment(SwingConstants.RIGHT);
 			lblIceLevel.setFont(new Font("Tahoma", Font.BOLD, 25));
