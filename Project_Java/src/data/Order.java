@@ -8,6 +8,7 @@ public class Order {
 	private int orderNo;
 	private double totalPrice;
 
+	
 	public Vector<Item> getItems() {
 	 	 return items; 
 	}
@@ -37,7 +38,6 @@ public class Order {
 	 }
 
 	public void removeItem(int itemIndex) { 
-		// TODO Auto-generated method
 	 } 
 
 }

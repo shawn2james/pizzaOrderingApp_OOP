@@ -1,5 +1,7 @@
 package data;
 
+import java.util.Vector;
+
 public class Staff {
 	private String username;
 	private String password;
@@ -26,8 +28,8 @@ public class Staff {
 	}
 
 	public void editOrderItem(int orderNo, int itemIndex, Item editedItem) { 
-		// TODO Auto-generated method
-	 }
+	
+	}
 
 	public void removeOrderItem(int orderNo, int itemIndex) { 
 		// TODO Auto-generated method

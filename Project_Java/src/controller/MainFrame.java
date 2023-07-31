@@ -1,11 +1,13 @@
 package controller;
 
 import java.awt.CardLayout;
+import java.util.Vector;
 
 import javax.swing.JFrame;
 
 import data.Item;
 import data.Order;
+import data.Staff;
 import gui.CustomizeScreen;
 import gui.MenuScreen;
 import gui.SelectionScreen;
@@ -23,9 +25,7 @@ public class MainFrame extends JFrame {
 		this.setLayout(this.card);
 		this.controller = new Controller();
 		this.showSelectionScreen();
-		System.out.println("lsjdf");
 		this.setExtendedState(JFrame.MAXIMIZED_BOTH); 
-		this.setUndecorated(true);
 		this.setVisible(true);
 	}
 	
