@@ -1,6 +1,5 @@
 package gui;
 
-import java.awt.Dimension;
 
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
@@ -37,12 +36,13 @@ public class MenuScreen extends JPanel {
 		
 		JLabel lblMenu = new JLabel("Menu");
 		lblMenu.setHorizontalAlignment(SwingConstants.CENTER);
-		lblMenu.setFont(new Font("Berlin Sans FB Demi", Font.BOLD, 21));
-		lblMenu.setBounds(400, 27, 130, 16);
+		lblMenu.setFont(new Font("Berlin Sans FB Demi", Font.BOLD, 40));
+		lblMenu.setBounds(650, 50, 600, 40);
 		add(lblMenu);
 
 	    JTabbedPane tabby = new JTabbedPane( );
-	    tabby.setBounds(0, 100, 1000, 300);
+	    tabby.setBounds(0, 200, 1920, 400);
+		tabby.setFont(new Font("Tahoma", Font.BOLD, 30));
 	    JPanel pizzasTab = new JPanel( );
 	    Pizza[] pizzas = main.getController().getAllPizzas();
 		JButton[] pizzaButtons  = new JButton[pizzas.length];
@@ -50,6 +50,7 @@ public class MenuScreen extends JPanel {
 		int pos = 0;
 		for(int i=0; i<pizzas.length; i++) {
 			btnPizza = new JButton(pizzas[i].getName());
+			btnPizza.setFont(new Font("Tahoma", Font.PLAIN, 19));
 			btnPizza.setHorizontalAlignment(SwingConstants.LEFT);
 			btnPizza.setBounds(0, pos, 903, 90);
 			btnPizza.addActionListener(new ActionListener() {
@@ -78,6 +79,7 @@ public class MenuScreen extends JPanel {
 		pos = 0;
 		for(int i=0; i<drinks.length; i++) {
 			btnDrink = new JButton(drinks[i].getName());
+			btnDrink.setFont(new Font("Tahoma", Font.PLAIN, 19));
 			btnDrink.setHorizontalAlignment(SwingConstants.LEFT);
 			btnDrink.setBounds(0, pos, 903, 90);
 			btnDrink.addActionListener(new ActionListener() {
@@ -114,7 +116,7 @@ public class MenuScreen extends JPanel {
 			}
 		});
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 17));
-		btnNewButton.setBounds(561, 455, 141, 42);
+		btnNewButton.setBounds(1200, 700, 141, 42);
 		add(btnNewButton);
 		
 		JButton btnExit = new JButton("Exit");
@@ -125,7 +127,7 @@ public class MenuScreen extends JPanel {
 			}
 		});
 		btnExit.setFont(new Font("Tahoma", Font.PLAIN, 17));
-		btnExit.setBounds(734, 455, 141, 42);
+		btnExit.setBounds(1500, 700, 141, 42);
 		add(btnExit);
 	}
 }

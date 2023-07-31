@@ -24,8 +24,8 @@ public class SelectionScreen extends JPanel {
 				main.showMenuScreen();
 			}
 		});
-		btnCustomerStartOrdering.setFont(new Font("Tahoma", Font.BOLD, 16));
-		btnCustomerStartOrdering.setBounds(341, 237, 271, 47);
+		btnCustomerStartOrdering.setFont(new Font("Tahoma", Font.BOLD, 24));
+		btnCustomerStartOrdering.setBounds(700, 300, 500, 80);
 		add(btnCustomerStartOrdering);
 		
 		JButton btnStaff = new JButton("Staff");
@@ -34,14 +34,14 @@ public class SelectionScreen extends JPanel {
 				main.showStaffLoginScreen();
 			}
 		});
-		btnStaff.setFont(new Font("Tahoma", Font.BOLD, 16));
-		btnStaff.setBounds(341, 322, 271, 47);
+		btnStaff.setFont(new Font("Tahoma", Font.BOLD, 24));
+		btnStaff.setBounds(700, 400, 500, 80);
 		add(btnStaff);
 		
 		JLabel lblTemasekPizzas = new JLabel("Temasek Pizzas");
 		lblTemasekPizzas.setHorizontalAlignment(SwingConstants.CENTER);
-		lblTemasekPizzas.setFont(new Font("Berlin Sans FB Demi", Font.BOLD, 29));
-		lblTemasekPizzas.setBounds(314, 36, 312, 47);
+		lblTemasekPizzas.setFont(new Font("Berlin Sans FB Demi", Font.BOLD, 55));
+		lblTemasekPizzas.setBounds(730, 50, 500, 47);
 		add(lblTemasekPizzas);
 	} 
 }

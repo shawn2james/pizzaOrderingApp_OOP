@@ -31,32 +31,32 @@ public class CustomizeScreen extends JPanel {
 		
 		if(item instanceof Drink) {
 			JLabel lblCustomizeYourDrink = new JLabel("Customize your drink");
-			lblCustomizeYourDrink.setBounds(367, 44, 203, 25);
+			lblCustomizeYourDrink.setFont(new Font("Berlin Sans FB Demi", Font.BOLD, 40));
+			lblCustomizeYourDrink.setBounds(650, 50, 600, 40);
 			lblCustomizeYourDrink.setHorizontalAlignment(SwingConstants.CENTER);
-			lblCustomizeYourDrink.setFont(new Font("Berlin Sans FB Demi", Font.BOLD, 21));
 			add(lblCustomizeYourDrink);
 			
 			JLabel lblSize = new JLabel("Size:");
 			lblSize.setHorizontalAlignment(SwingConstants.RIGHT);
-			lblSize.setFont(new Font("Tahoma", Font.PLAIN, 19));
-			lblSize.setBounds(75, 142, 78, 31);
+			lblSize.setFont(new Font("Tahoma", Font.BOLD, 25));
+			lblSize.setBounds(100, 150, 600, 40);
 			add(lblSize);
 			
 			JLabel lblIceLevel = new JLabel("Ice Level:");
 			lblIceLevel.setHorizontalAlignment(SwingConstants.RIGHT);
-			lblIceLevel.setFont(new Font("Tahoma", Font.PLAIN, 19));
-			lblIceLevel.setBounds(54, 209, 99, 31);
+			lblIceLevel.setFont(new Font("Tahoma", Font.BOLD, 25));
+			lblIceLevel.setBounds(100, 250, 600, 40);
 			add(lblIceLevel);
 			
 			JComboBox comboBox = new JComboBox(sizes);
-			comboBox.setFont(new Font("Tahoma", Font.PLAIN, 18));
-			comboBox.setBounds(187, 139, 195, 38);
+			comboBox.setFont(new Font("Tahoma", Font.BOLD, 25));
+			comboBox.setBounds(750, 150, 200, 40);
 			add(comboBox);
 			
 			JComboBox comboBox_1 = new JComboBox(iceLevels);
-			comboBox_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
+			comboBox_1.setFont(new Font("Tahoma", Font.BOLD, 25));
+			comboBox_1.setBounds(750, 250, 200, 40);
 			comboBox_1.setSelectedIndex(0);
-			comboBox_1.setBounds(187, 206, 195, 38);
 			add(comboBox_1);
 			
 			JButton btnBack = new JButton("Back");
@@ -66,7 +66,7 @@ public class CustomizeScreen extends JPanel {
 				}
 			});
 			btnBack.setFont(new Font("Tahoma", Font.PLAIN, 20));
-			btnBack.setBounds(300, 350, 141, 31);
+			btnBack.setBounds(800, 350, 200, 50);
 			add(btnBack);
 			
 			JButton btnConfirm = new JButton("Confirm");
@@ -79,34 +79,34 @@ public class CustomizeScreen extends JPanel {
 				}
 			});
 			btnConfirm.setFont(new Font("Tahoma", Font.PLAIN, 20));
-			btnConfirm.setBounds(486, 350, 141, 31);
+			btnConfirm.setBounds(1100, 350, 200, 50);
 			add(btnConfirm);
 		} else if (item instanceof Pizza) {
 			JLabel lblCustomizeYourPizza = new JLabel("Customize your Pizza");
-			lblCustomizeYourPizza.setBounds(367, 44, 250, 25);
+			lblCustomizeYourPizza.setFont(new Font("Berlin Sans FB Demi", Font.BOLD, 40));
+			lblCustomizeYourPizza.setBounds(650, 50, 600, 40);
 			lblCustomizeYourPizza.setHorizontalAlignment(SwingConstants.CENTER);
-			lblCustomizeYourPizza.setFont(new Font("Berlin Sans FB Demi", Font.BOLD, 21));
 			add(lblCustomizeYourPizza);
 			
 			JLabel lblSize = new JLabel("Size:");
 			lblSize.setHorizontalAlignment(SwingConstants.RIGHT);
-			lblSize.setFont(new Font("Tahoma", Font.PLAIN, 19));
-			lblSize.setBounds(75, 142, 78, 31);
+			lblSize.setFont(new Font("Tahoma", Font.BOLD, 25));
+			lblSize.setBounds(100, 150, 600, 40);
 			add(lblSize);
 			
 			JLabel lblToppings = new JLabel("Toppings:");
 			lblToppings.setHorizontalAlignment(SwingConstants.RIGHT);
-			lblToppings.setFont(new Font("Tahoma", Font.PLAIN, 19));
-			lblToppings.setBounds(54, 209, 99, 31);
+			lblToppings.setFont(new Font("Tahoma", Font.BOLD, 25));
+			lblToppings.setBounds(100, 250, 600, 40);
 			add(lblToppings);
 			
 			JComboBox comboBox = new JComboBox(sizes);
-			comboBox.setFont(new Font("Tahoma", Font.PLAIN, 18));
-			comboBox.setBounds(187, 139, 195, 38);
+			comboBox.setFont(new Font("Tahoma", Font.BOLD, 25));
+			comboBox.setBounds(750, 150, 200, 40);
 			add(comboBox);
 			
 			String[] toppings = main.getController().inventory.getToppings();
-			int pos = 209;
+			int pos = 250;
 			for(int i=0; i<toppings.length; i++) {
 				JCheckBox chkTopping = new JCheckBox(toppings[i]);
 				chkTopping.addActionListener(new ActionListener() {
@@ -119,9 +119,9 @@ public class CustomizeScreen extends JPanel {
 						}
 					}
 				});
-				chkTopping.setBounds(187, pos, 200, 40);
-				chkTopping.setFont(new Font("Tahoma", Font.PLAIN, 18));
-				pos += 30;
+				chkTopping.setFont(new Font("Tahoma", Font.BOLD, 25));
+				chkTopping.setBounds(750, pos, 200, 40);
+				pos += 50;
 				add(chkTopping);
 			}
 			
@@ -132,7 +132,7 @@ public class CustomizeScreen extends JPanel {
 				}
 			});
 			btnBack.setFont(new Font("Tahoma", Font.PLAIN, 20));
-			btnBack.setBounds(300, 400, 141, 31);
+			btnBack.setBounds(800, pos+80, 200, 50);
 			add(btnBack);
 			
 			JButton btnConfirm = new JButton("Confirm");
@@ -145,7 +145,7 @@ public class CustomizeScreen extends JPanel {
 				}
 			});
 			btnConfirm.setFont(new Font("Tahoma", Font.PLAIN, 20));
-			btnConfirm.setBounds(486, 400, 141, 31);
+			btnConfirm.setBounds(1100, pos+80, 200, 50);
 			add(btnConfirm);
 		}
 	}

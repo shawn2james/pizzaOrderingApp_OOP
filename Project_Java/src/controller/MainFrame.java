@@ -17,13 +17,15 @@ public class MainFrame extends JFrame {
 	
 	public MainFrame() {
 		this.setTitle("Temasek Pizzas");
-		this.setSize(1000, 800);
+		this.setSize(1920, 1080);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.card = new CardLayout();
 		this.setLayout(this.card);
 		this.controller = new Controller();
 		this.showSelectionScreen();
 		System.out.println("lsjdf");
+		this.setExtendedState(JFrame.MAXIMIZED_BOTH); 
+		this.setUndecorated(true);
 		this.setVisible(true);
 	}
 	
