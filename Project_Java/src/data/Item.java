@@ -1,38 +1,39 @@
 package data;
 
 public class Item {
-
-	/**
-	 * 
-	 */
+	private double[] prices;
 	private String name;
-	/**
-	 * 
-	 */
-	private double price;
-	/**
-	 * Getter of name
-	 */
+	private String size;
+
+	
+	public double[] getPrices() {
+	 	 return prices; 
+	}
+	
+	public double getPrice() {
+		if(size=="S") return prices[0];
+		else if(size=="M") return prices[1];
+		else return prices[2];
+	}
+
+	public void setPrices(double[] prices) { 
+		 this.prices = prices; 
+	}
+
 	public String getName() {
 	 	 return name; 
 	}
-	/**
-	 * Setter of name
-	 */
+
 	public void setName(String name) { 
 		 this.name = name; 
-	}
-	/**
-	 * Getter of price
-	 */
-	public double getPrice() {
-	 	 return price; 
-	}
-	/**
-	 * Setter of price
-	 */
-	public void setPrice(double price) { 
-		 this.price = price; 
 	} 
-
+	
+	
+	public String getSize() {
+	 	 return size; 
+	}
+	
+	public void setSize(String size) { 
+		 this.size = size; 
+	} 
 }

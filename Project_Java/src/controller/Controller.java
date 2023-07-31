@@ -1,38 +1,41 @@
 package controller;
 
-import java.util.List;
+import java.util.Vector;
 
+import data.DataStorage;
+import data.Drink;
+import data.Inventory;
 import data.Order;
+import data.Pizza;
 import data.Staff;
 
 public class Controller {
+	public DataStorage ds = new DataStorage();
+	public Order currentOrder = new Order();
+	public Inventory inventory = new Inventory();
 
-	/**
-	 * 
-	 * @param orderNo 
-	 * @return 
-	 */
-	public Order getOrder(int orderNo) { 
-		// TODO Auto-generated method
-		return null;
-	 }
 
-	/**
-	 * 
-	 * @return 
-	 */
 	public Order getAllOrders() { 
-		// TODO Auto-generated method
 		return null;
 	 }
 
-	/**
-	 * 
-	 * @return 
-	 */
-	public List<Staff> getAllStaffs() { 
-		// TODO Auto-generated method
+	public Order getOrder(int orderNo) { 
+		return null;
+	 }
+
+	public Vector<Staff> getAllStaffs() { 
 		return null;
 	 } 
 
+	public Pizza[] getAllPizzas() {
+		Pizza[] opArr = new Pizza[this.ds.getPizzas().size()];
+		this.ds.getPizzas().toArray(opArr);
+		return opArr;
+	}
+	
+	public Drink[] getAllDrinks() {
+		Drink[] opArr = new Drink[this.ds.getDrinks().size()];
+		this.ds.getDrinks().toArray(opArr);
+		return opArr;
+	}
 }

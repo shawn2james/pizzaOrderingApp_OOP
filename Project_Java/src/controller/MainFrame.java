@@ -4,7 +4,12 @@ import java.awt.CardLayout;
 
 import javax.swing.JFrame;
 
+import data.Item;
+import data.Order;
+import gui.CustomizeScreen;
+import gui.MenuScreen;
 import gui.SelectionScreen;
+import gui.ViewCartScreen;
 
 public class MainFrame extends JFrame {
 	public Controller controller;
@@ -12,12 +17,13 @@ public class MainFrame extends JFrame {
 	
 	public MainFrame() {
 		this.setTitle("Temasek Pizzas");
-		this.setSize(600, 400);
+		this.setSize(1000, 800);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.card = new CardLayout();
 		this.setLayout(this.card);
 		this.controller = new Controller();
 		this.showSelectionScreen();
+		System.out.println("lsjdf");
 		this.setVisible(true);
 	}
 	
@@ -35,9 +41,17 @@ public class MainFrame extends JFrame {
 		this.card.show(this.getContentPane(), "Selection");
 	}
 
-	public void showCustomizeScreen() { 
-		// TODO Auto-generated method
-	 }
+	public void showCustomizeScreen(Item item) { 
+		CustomizeScreen s3 = new CustomizeScreen(this, item);
+		this.add(s3, "Customize");
+		this.card.show(this.getContentPane(), "Customize");	 
+	}
+	
+	public void showViewCartScreen() { 
+		ViewCartScreen s4 = new ViewCartScreen(this);
+		this.add(s4, "ViewCart");
+		this.card.show(this.getContentPane(), "ViewCart");	 
+	}
 
 	public void showOrderScreen() { 
 		// TODO Auto-generated method
@@ -56,7 +70,9 @@ public class MainFrame extends JFrame {
 	 }
 
 	public void showMenuScreen() { 
-		// TODO Auto-generated method
+		MenuScreen s2 = new MenuScreen(this);
+		this.add(s2, "Menu");
+		this.card.show(this.getContentPane(), "Menu");
 	 } 
 	
 	public static void main(String args[]) {

@@ -108,19 +108,21 @@
         <ownedAttribute xmi:type="uml:Property" xmi:id="_g93LICYaEe6Y74zaMxOMLA" name="name" visibility="private">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_kGjaYCYaEe6Y74zaMxOMLA" name="price" visibility="private">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_kGjaYCYaEe6Y74zaMxOMLA" name="prices" visibility="private">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_64LUYC6nEe6kRsok1niWYA" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_64Qz8C6nEe6kRsok1niWYA" value="*"/>
         </ownedAttribute>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_qd7MICYaEe6Y74zaMxOMLA" name="Pizza">
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_y_N3wCYaEe6Y74zaMxOMLA" name="toppings" visibility="private"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_5K4HgCk1Ee64DqbVUFU4Fg" name="size" visibility="private">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
         </ownedAttribute>
       </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_qd7MICYaEe6Y74zaMxOMLA" name="Pizza">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_y_N3wCYaEe6Y74zaMxOMLA" name="toppings" visibility="private"/>
+      </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_sOkqYCYaEe6Y74zaMxOMLA" name="Drink">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_7u1TQCYaEe6Y74zaMxOMLA" name="iceLevel" visibility="private">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_tA44ICYaEe6Y74zaMxOMLA" name="Inventory">

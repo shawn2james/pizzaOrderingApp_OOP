@@ -21,11 +21,11 @@ public class SelectionScreen extends JPanel {
 		JButton btnCustomerStartOrdering = new JButton("Customer? Start Ordering!");
 		btnCustomerStartOrdering.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				main.showSelectionScreen();
+				main.showMenuScreen();
 			}
 		});
 		btnCustomerStartOrdering.setFont(new Font("Tahoma", Font.BOLD, 16));
-		btnCustomerStartOrdering.setBounds(141, 137, 271, 47);
+		btnCustomerStartOrdering.setBounds(341, 237, 271, 47);
 		add(btnCustomerStartOrdering);
 		
 		JButton btnStaff = new JButton("Staff");
@@ -35,13 +35,13 @@ public class SelectionScreen extends JPanel {
 			}
 		});
 		btnStaff.setFont(new Font("Tahoma", Font.BOLD, 16));
-		btnStaff.setBounds(141, 222, 271, 47);
+		btnStaff.setBounds(341, 322, 271, 47);
 		add(btnStaff);
 		
 		JLabel lblTemasekPizzas = new JLabel("Temasek Pizzas");
 		lblTemasekPizzas.setHorizontalAlignment(SwingConstants.CENTER);
 		lblTemasekPizzas.setFont(new Font("Berlin Sans FB Demi", Font.BOLD, 29));
-		lblTemasekPizzas.setBounds(114, 36, 312, 47);
+		lblTemasekPizzas.setBounds(314, 36, 312, 47);
 		add(lblTemasekPizzas);
 	} 
 }

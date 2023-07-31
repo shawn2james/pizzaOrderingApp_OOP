@@ -1,23 +1,24 @@
 package data;
 
-public class Drink {
-
-	/**
-	 * 
-	 */
-	private Integer iceLevel;
-
-	/**
-	 * Getter of iceLevel
-	 */
-	public Integer getIceLevel() {
+public class Drink extends Item {
+	private String iceLevel;
+	
+	public Drink(String name, double[] prices) {
+		this.setName(name);
+		this.setPrices(prices);
+		this.setSize("S");
+	}
+	
+	public Drink(String name, double[] prices, String	 size) {
+		this.setName(name);
+		this.setPrices(prices);
+		this.setSize(size);
+	}
+	public String getIceLevel() {
 	 	 return iceLevel; 
 	}
 
-	/**
-	 * Setter of iceLevel
-	 */
-	public void setIceLevel(Integer iceLevel) { 
+	public void setIceLevel(String iceLevel) { 
 		 this.iceLevel = iceLevel; 
 	} 
 
