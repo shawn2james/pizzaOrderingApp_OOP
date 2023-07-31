@@ -116,6 +116,11 @@
         <ownedAttribute xmi:type="uml:Property" xmi:id="_5K4HgCk1Ee64DqbVUFU4Fg" name="size" visibility="private">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
         </ownedAttribute>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_x3WiIC9tEe6QhLk73quZUg" name="getPrice">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_7Zm7gC9tEe6QhLk73quZUg" name="price" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+          </ownedParameter>
+        </ownedOperation>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_qd7MICYaEe6Y74zaMxOMLA" name="Pizza">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_y_N3wCYaEe6Y74zaMxOMLA" name="toppings" visibility="private"/>
@@ -299,4 +304,5 @@
   <java:JavaMethod xmi:id="_47YWICk5Ee64DqbVUFU4Fg" base_Operation="_hV7HwCk5Ee64DqbVUFU4Fg"/>
   <java:JavaProperty xmi:id="_xqx5QCncEe64DqbVUFU4Fg" base_Property="_tlZYQCncEe64DqbVUFU4Fg"/>
   <java:JavaProperty xmi:id="_2p-XICncEe64DqbVUFU4Fg" base_Property="_uzzsICncEe64DqbVUFU4Fg"/>
+  <java:JavaMethod xmi:id="_z4CngC9tEe6QhLk73quZUg" base_Operation="_x3WiIC9tEe6QhLk73quZUg"/>
 </xmi:XMI>
