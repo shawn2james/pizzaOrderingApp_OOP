@@ -5,6 +5,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JLabel;
 
 import java.awt.BorderLayout;
+import java.awt.Dimension;
 import java.awt.Font;
 import java.util.Vector;
 
@@ -15,6 +16,8 @@ import data.Drink;
 import data.Item;
 import data.Order;
 import data.Pizza;
+
+import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -132,10 +135,5 @@ public class ViewCartScreen extends JPanel {
 		});
 		btnBack.setFont(new Font("Tahoma", Font.PLAIN, 17));
 		add(btnBack);
-		
-		JScrollPane scrollPane = new JScrollPane();
-        scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_NEVER);
-        add(BorderLayout.CENTER, scrollPane);
 	}
 }

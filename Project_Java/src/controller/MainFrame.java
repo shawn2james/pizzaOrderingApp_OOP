@@ -1,9 +1,11 @@
 package controller;
 
 import java.awt.CardLayout;
+import java.awt.Dimension;
 import java.util.Vector;
 
 import javax.swing.JFrame;
+import javax.swing.JScrollPane;
 
 import data.Item;
 import data.Order;
@@ -62,13 +64,9 @@ public class MainFrame extends JFrame {
 	 }
 
 	public void showStaffMainScreen() { 
-<<<<<<< HEAD
 		StaffMainScreen s6 = new StaffMainScreen(this);
 		this.add(s6, "StaffMain");
 		this.card.show(this.getContentPane(), "StaffMain");
-=======
-		
->>>>>>> 763846651aa2128c4952b6137bb73ff3c2d7edf4
 	 }
 
 	public void showStaffLoginScreen() { 

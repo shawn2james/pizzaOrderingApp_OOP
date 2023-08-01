@@ -22,12 +22,15 @@ public class Inventory {
 		 this.toppings = toppings; 
 	}
 	
-	public void remove(int qty, String topping) { 
-		// TODO Auto-generated method
-	 }
+	public void remove(String topping) { 
+		for(int i=0; i<toppings.length; i++) {
+			if(toppings[i]==topping) quantities[i]-=1;
+		}
+	}
 	
-	public void add(String topping, int qty) { 
-		// TODO Auto-generated method
-	 } 
+	public void add(String topping) { 
+		for(int i=0; i<toppings.length; i++) {
+			if(toppings[i]==topping) quantities[i]+=1;
+		}	 } 
 
 }
