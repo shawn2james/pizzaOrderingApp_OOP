@@ -11,6 +11,7 @@ import javax.swing.JTextField;
 import controller.MainFrame;
 
 import java.awt.event.ActionListener;
+import java.awt.List;
 import java.awt.event.ActionEvent;
 
 public class StaffMainScreen extends JPanel {
@@ -23,13 +24,12 @@ public class StaffMainScreen extends JPanel {
 		JButton btnViewInventory = new JButton("View Inventory");
 		btnViewInventory.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				
-				
+				String[] toppings = main.getController().inventory.getToppings();
+				int[] quantities = main.getController().inventory.getQuantities();
 				main.showInventoryScreen();
 			}
 		});
-		btnViewInventory.setBounds(158, 46, 115, 29);
+		btnViewInventory.setBounds(158, 84, 115, 29);
 		add(btnViewInventory);
 		
 		JButton btnViewOrders = new JButton("View Orders");
@@ -38,7 +38,7 @@ public class StaffMainScreen extends JPanel {
 				main.showOrderScreen();
 			}
 		});
-		btnViewOrders.setBounds(158, 111, 115, 29);
+		btnViewOrders.setBounds(158, 140, 115, 29);
 		add(btnViewOrders);
 		
 		JLabel label = new JLabel("");
@@ -46,7 +46,20 @@ public class StaffMainScreen extends JPanel {
 		add(label);
 		
 		JLabel lblTotalSales = new JLabel("Total Sales");
-		lblTotalSales.setBounds(123, 179, 233, 20);
+		lblTotalSales.setBounds(96, 201, 233, 20);
 		add(lblTotalSales);
+		
+		JLabel lblStaffMenu = new JLabel("Staff Menu");
+		lblStaffMenu.setBounds(168, 32, 87, 20);
+		add(lblStaffMenu);
+		
+		JButton btnBack = new JButton("Back");
+		btnBack.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				main.showStaffLoginScreen();
+			}
+		});
+		btnBack.setBounds(73, 237, 115, 29);
+		add(btnBack);
 	} 
 }

@@ -11,7 +11,9 @@ import data.Item;
 import data.Order;
 import data.Staff;
 import gui.CustomizeScreen;
+import gui.InventoryScreen;
 import gui.MenuScreen;
+import gui.OrderScreen;
 import gui.SelectionScreen;
 import gui.StaffLoginScreen;
 import gui.StaffMainScreen;
@@ -60,7 +62,7 @@ public class MainFrame extends JFrame {
 	}
 
 	public void showOrderScreen() { 
-		// TODO Auto-generated method
+		
 	 }
 
 	public void showStaffMainScreen() { 
@@ -76,7 +78,9 @@ public class MainFrame extends JFrame {
 	 }
 
 	public void showInventoryScreen() { 
-		// TODO Auto-generated method
+		InventoryScreen s7 = new InventoryScreen(this);
+		this.add(s7, "InventoryScreen");
+		this.card.show(this.getContentPane(),"InventoryScreen" );
 	 }
 
 	public void showMenuScreen() { 
