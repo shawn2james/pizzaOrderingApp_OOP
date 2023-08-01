@@ -35,20 +35,22 @@ public class InventoryScreen extends JPanel{
 			add(toppingLbl);
 			
 			plusBtn = new JButton("+");
-			plusBtn.setBounds(810, pos, 50, 30);
+			plusBtn.setBounds(910, pos, 50, 30);
+			plusBtn.setFont(new Font("Tahoma", Font.PLAIN, 17));
 			add(plusBtn);
 			
 			qtyLbl = new JLabel(String.valueOf(quantities[i]));
 			qtyLbl.setFont(new Font("Tahoma", Font.PLAIN, 19));
 			qtyLbl.setHorizontalAlignment(SwingConstants.CENTER);
-			qtyLbl.setBounds(880,pos,50,30);
+			qtyLbl.setBounds(980,pos,50,30);
 			add(qtyLbl);
 			
 			minusBtn = new JButton("-");
-			minusBtn.setBounds(950, pos, 50, 30);
+			minusBtn.setBounds(1050, pos, 50, 30);
+			minusBtn.setFont(new Font("Tahoma", Font.PLAIN, 17));
 			add(minusBtn);
 			
-			pos+=100;			
+			pos+=50;			
 		};
 		
 		
@@ -58,6 +60,7 @@ public class InventoryScreen extends JPanel{
 				main.showStaffMainScreen();
 			}
 		});
+		btnBack.setFont(new Font("Tahoma", Font.PLAIN, 17));
 		btnBack.setBounds(1200, 800, 115, 29);
 		add(btnBack);
 		
