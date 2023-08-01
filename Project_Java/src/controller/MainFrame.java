@@ -5,6 +5,7 @@ import java.awt.Dimension;
 import java.util.Vector;
 
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
 import data.Item;
@@ -55,9 +56,9 @@ public class MainFrame extends JFrame {
 		this.card.show(this.getContentPane(), "Customize");	 
 	}
 	
-	public void showViewCartScreen() { 
+	public void showViewCartScreen() {
 		ViewCartScreen s4 = new ViewCartScreen(this);
-		this.add(s4, "ViewCart");
+		
 		this.card.show(this.getContentPane(), "ViewCart");	 
 	}
 
