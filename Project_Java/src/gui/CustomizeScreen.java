@@ -114,11 +114,10 @@ public class CustomizeScreen extends JPanel {
 					public void actionPerformed(ActionEvent e) {
 						JCheckBox chkBox = (JCheckBox)(e.getSource());
 						if(chkBox.isEnabled()==true) {
+							if(!((Pizza)item).getToppings().contains(chkBox.getText()))
 							((Pizza) item).addTopping(chkBox.getText());
-							main.getController().inventory.remove(chkBox.getText());
 						} else {
 							((Pizza) item).removeTopping(chkBox.getText());
-							main.getController().inventory.add(chkBox.getText());
 						}
 					}
 				});

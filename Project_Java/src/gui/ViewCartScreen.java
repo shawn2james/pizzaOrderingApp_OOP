@@ -50,6 +50,13 @@ public class ViewCartScreen extends JPanel {
 		btnConfirm.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				main.getController().ds.addOrder(main.getController().currentOrder);
+				for(int i=0; i<main.getController().currentOrder.getItems().size(); i++) {
+					Item item = main.getController().currentOrder.getItems().get(i);
+					if(item instanceof Pizza) {
+						Vector<String> toppings = ((Pizza)item).getToppings();
+						for(int j=0; j<toppings.size(); j++) main.getController().inventory.remove(toppings.get(j));
+					}
+				}
 				main.getController().currentOrder = new Order();
 				main.showSelectionScreen();
 			}
