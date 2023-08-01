@@ -116,6 +116,8 @@
         <ownedAttribute xmi:type="uml:Property" xmi:id="_5K4HgCk1Ee64DqbVUFU4Fg" name="size" visibility="private">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
         </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_3pN78DCSEe6Wo4bMG-D6WA" name="drink" type="_sOkqYCYaEe6Y74zaMxOMLA" association="_3pCVwDCSEe6Wo4bMG-D6WA"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_4q40UjCSEe6Wo4bMG-D6WA" name="pizza" type="_qd7MICYaEe6Y74zaMxOMLA" association="_4q4NQDCSEe6Wo4bMG-D6WA"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_x3WiIC9tEe6QhLk73quZUg" name="getPrice">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_7Zm7gC9tEe6QhLk73quZUg" name="price" direction="return">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
@@ -124,11 +126,53 @@
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_qd7MICYaEe6Y74zaMxOMLA" name="Pizza">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_y_N3wCYaEe6Y74zaMxOMLA" name="toppings" visibility="private"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_UivsADCTEe6Wo4bMG-D6WA" name="Pizza">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_fl86wDCTEe6Wo4bMG-D6WA" name="name">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_iycE4DCTEe6Wo4bMG-D6WA" name="prices">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LlcG4DCgEe6Wo4bMG-D6WA" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LliNgDCgEe6Wo4bMG-D6WA" value="*"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_3Jx7ADCfEe6Wo4bMG-D6WA" name="PizzaOperation1">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_CW8XADCgEe6Wo4bMG-D6WA" name="name">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_RoVdcDCgEe6Wo4bMG-D6WA" name="prices">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_UieTUDCgEe6Wo4bMG-D6WA" name="size">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_sOkqYCYaEe6Y74zaMxOMLA" name="Drink">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_7u1TQCYaEe6Y74zaMxOMLA" name="iceLevel" visibility="private">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedAttribute>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_cBEL0DCgEe6Wo4bMG-D6WA" name="Drink">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_tyxS4DCgEe6Wo4bMG-D6WA" name="name">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_yIn40DCgEe6Wo4bMG-D6WA" name="prices">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_hthYUDCgEe6Wo4bMG-D6WA" name="Drink">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_5-lvgDCgEe6Wo4bMG-D6WA" name="name">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_7V9LEDCgEe6Wo4bMG-D6WA" name="prices">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8LBK0DCgEe6Wo4bMG-D6WA" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8LFcQDCgEe6Wo4bMG-D6WA" value="*"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_-VihoDCgEe6Wo4bMG-D6WA" name="size">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_tA44ICYaEe6Y74zaMxOMLA" name="Inventory">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_CVNxYCYbEe6Y74zaMxOMLA" name="toppings" visibility="private">
@@ -167,7 +211,6 @@
         <ownedAttribute xmi:type="uml:Property" xmi:id="__jzxsin0Ee6kRsok1niWYA" name="staffloginscreen" type="_ohQLcCYXEe6Y74zaMxOMLA" association="__jzKoCn0Ee6kRsok1niWYA"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_AwVPMin1Ee6kRsok1niWYA" name="inventoryscreen" type="_kCwF8CkvEe64DqbVUFU4Fg" association="_AwUoICn1Ee6kRsok1niWYA"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_BlG7Ein1Ee6kRsok1niWYA" name="staffmainscreen" type="_r2zyACYXEe6Y74zaMxOMLA" association="_BlGUACn1Ee6kRsok1niWYA"/>
-        <ownedOperation xmi:type="uml:Operation" xmi:id="_mQky8CkwEe64DqbVUFU4Fg" name="showSelectionScreen"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_osKroCkwEe64DqbVUFU4Fg" name="showMenuScreen"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_p2E6ACkwEe64DqbVUFU4Fg" name="showCustomizeScreen"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_sed4kCkwEe64DqbVUFU4Fg" name="showStaffLoginScreen"/>
@@ -176,6 +219,7 @@
         <ownedOperation xmi:type="uml:Operation" xmi:id="_0CY9ACkwEe64DqbVUFU4Fg" name="showInventoryScreen"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_L1vIUCkvEe64DqbVUFU4Fg" name="Controller">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_mZaqQDChEe6Wo4bMG-D6WA" name="currentOrder" type="_BUzvMCYZEe6Y74zaMxOMLA"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_Iy420Ck5Ee64DqbVUFU4Fg" name="getAllOrders">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_NppKYCk5Ee64DqbVUFU4Fg" name="orders" type="_BUzvMCYZEe6Y74zaMxOMLA" direction="return"/>
         </ownedOperation>
@@ -191,6 +235,8 @@
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
           </ownedParameter>
         </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_sz4zUDChEe6Wo4bMG-D6WA" name="getAllPizzas"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_6NR2UDChEe6Wo4bMG-D6WA" name="getAllDrinks"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_gcLn4CkvEe64DqbVUFU4Fg" name="OrderScreen"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_kCwF8CkvEe64DqbVUFU4Fg" name="InventoryScreen"/>
@@ -249,6 +295,18 @@
       </eAnnotations>
       <ownedEnd xmi:type="uml:Property" xmi:id="_BlHiICn1Ee6kRsok1niWYA" name="mainframe" type="_KuvEACkvEe64DqbVUFU4Fg" association="_BlGUACn1Ee6kRsok1niWYA"/>
     </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_3pCVwDCSEe6Wo4bMG-D6WA" memberEnd="_3pN78DCSEe6Wo4bMG-D6WA _3pPKEDCSEe6Wo4bMG-D6WA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3pLfsDCSEe6Wo4bMG-D6WA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_3pMGwDCSEe6Wo4bMG-D6WA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_3pPKEDCSEe6Wo4bMG-D6WA" name="item" type="_cB9R0CYaEe6Y74zaMxOMLA" aggregation="composite" association="_3pCVwDCSEe6Wo4bMG-D6WA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_4q4NQDCSEe6Wo4bMG-D6WA" memberEnd="_4q40UjCSEe6Wo4bMG-D6WA _4q40UzCSEe6Wo4bMG-D6WA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_4q40UDCSEe6Wo4bMG-D6WA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_4q40UTCSEe6Wo4bMG-D6WA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_4q40UzCSEe6Wo4bMG-D6WA" name="item" type="_cB9R0CYaEe6Y74zaMxOMLA" aggregation="composite" association="_4q4NQDCSEe6Wo4bMG-D6WA"/>
+    </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_ik_nQCBXEe6AFdXvRKMkMw">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ilCDgCBXEe6AFdXvRKMkMw" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/JAVA/1#/"/>
@@ -292,7 +350,6 @@
   <java:JavaMethod xmi:id="_NNnPUCkxEe64DqbVUFU4Fg" base_Operation="_sed4kCkwEe64DqbVUFU4Fg"/>
   <java:JavaMethod xmi:id="_N44Z4CkxEe64DqbVUFU4Fg" base_Operation="_p2E6ACkwEe64DqbVUFU4Fg"/>
   <java:JavaMethod xmi:id="_Okqh0CkxEe64DqbVUFU4Fg" base_Operation="_osKroCkwEe64DqbVUFU4Fg"/>
-  <java:JavaMethod xmi:id="_PMuAUCkxEe64DqbVUFU4Fg" base_Operation="_mQky8CkwEe64DqbVUFU4Fg"/>
   <java:JavaProperty xmi:id="_y2g4YCkzEe64DqbVUFU4Fg" base_Property="__M6CwCkyEe64DqbVUFU4Fg"/>
   <java:JavaMethod xmi:id="_1kHuICkzEe64DqbVUFU4Fg" base_Operation="_0lSuYCkzEe64DqbVUFU4Fg"/>
   <java:JavaMethod xmi:id="_2YS9ECkzEe64DqbVUFU4Fg" base_Operation="_zeFOsCkzEe64DqbVUFU4Fg"/>
@@ -305,4 +362,12 @@
   <java:JavaProperty xmi:id="_xqx5QCncEe64DqbVUFU4Fg" base_Property="_tlZYQCncEe64DqbVUFU4Fg"/>
   <java:JavaProperty xmi:id="_2p-XICncEe64DqbVUFU4Fg" base_Property="_uzzsICncEe64DqbVUFU4Fg"/>
   <java:JavaMethod xmi:id="_z4CngC9tEe6QhLk73quZUg" base_Operation="_x3WiIC9tEe6QhLk73quZUg"/>
+  <java:JavaMethod xmi:id="_jup1gDCTEe6Wo4bMG-D6WA" base_Operation="_UivsADCTEe6Wo4bMG-D6WA"/>
+  <java:JavaMethod xmi:id="_W2u08DCgEe6Wo4bMG-D6WA" base_Operation="_3Jx7ADCfEe6Wo4bMG-D6WA"/>
+  <java:JavaMethod xmi:id="_lSPcQDCgEe6Wo4bMG-D6WA" base_Operation="_cBEL0DCgEe6Wo4bMG-D6WA"/>
+  <java:JavaMethod xmi:id="_-87RwDCgEe6Wo4bMG-D6WA" base_Operation="_hthYUDCgEe6Wo4bMG-D6WA"/>
+  <java:JavaClass xmi:id="_Rmz-ADChEe6Wo4bMG-D6WA" base_Classifier="_gcLn4CkvEe64DqbVUFU4Fg"/>
+  <java:JavaClass xmi:id="_SfXWoDChEe6Wo4bMG-D6WA" base_Classifier="_kCwF8CkvEe64DqbVUFU4Fg"/>
+  <java:JavaMethod xmi:id="_vor2MDChEe6Wo4bMG-D6WA" base_Operation="_sz4zUDChEe6Wo4bMG-D6WA"/>
+  <java:JavaMethod xmi:id="_7yZaADChEe6Wo4bMG-D6WA" base_Operation="_6NR2UDChEe6Wo4bMG-D6WA"/>
 </xmi:XMI>
