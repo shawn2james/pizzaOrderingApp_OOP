@@ -118,6 +118,9 @@ public class MenuScreen extends JPanel {
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 17));
 		btnNewButton.setBounds(1200, 700, 141, 42);
 		add(btnNewButton);
+		if(main.getController().currentOrder.getItems().size()==0) {
+			btnNewButton.setEnabled(false);
+		}
 		
 		JButton btnExit = new JButton("Exit");
 		btnExit.addActionListener(new ActionListener() {

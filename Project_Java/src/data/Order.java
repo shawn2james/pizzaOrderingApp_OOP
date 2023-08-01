@@ -38,6 +38,7 @@ public class Order {
 	 }
 
 	public void removeItem(int itemIndex) { 
+		items.remove(itemIndex);
 	 } 
 
 }
