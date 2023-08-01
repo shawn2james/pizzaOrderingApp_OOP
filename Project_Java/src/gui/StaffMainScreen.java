@@ -13,6 +13,7 @@ import controller.MainFrame;
 import java.awt.event.ActionListener;
 import java.awt.List;
 import java.awt.event.ActionEvent;
+import java.awt.Font;
 
 public class StaffMainScreen extends JPanel {
 	private MainFrame main;
@@ -22,6 +23,7 @@ public class StaffMainScreen extends JPanel {
 		
 		
 		JButton btnViewInventory = new JButton("View Inventory");
+		btnViewInventory.setFont(new Font("Tahoma", Font.PLAIN, 30));
 		btnViewInventory.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String[] toppings = main.getController().inventory.getToppings();
@@ -29,16 +31,17 @@ public class StaffMainScreen extends JPanel {
 				main.showInventoryScreen();
 			}
 		});
-		btnViewInventory.setBounds(158, 84, 115, 29);
+		btnViewInventory.setBounds(493, 251, 265, 29);
 		add(btnViewInventory);
 		
 		JButton btnViewOrders = new JButton("View Orders");
+		btnViewOrders.setFont(new Font("Tahoma", Font.PLAIN, 30));
 		btnViewOrders.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				main.showOrderScreen();
 			}
 		});
-		btnViewOrders.setBounds(158, 140, 115, 29);
+		btnViewOrders.setBounds(493, 357, 265, 29);
 		add(btnViewOrders);
 		
 		JLabel label = new JLabel("");
@@ -46,20 +49,23 @@ public class StaffMainScreen extends JPanel {
 		add(label);
 		
 		JLabel lblTotalSales = new JLabel("Total Sales");
-		lblTotalSales.setBounds(96, 201, 233, 20);
+		lblTotalSales.setFont(new Font("Tahoma", Font.PLAIN, 25));
+		lblTotalSales.setBounds(493, 471, 233, 20);
 		add(lblTotalSales);
 		
 		JLabel lblStaffMenu = new JLabel("Staff Menu");
-		lblStaffMenu.setBounds(168, 32, 87, 20);
+		lblStaffMenu.setFont(new Font("Tahoma", Font.BOLD, 35));
+		lblStaffMenu.setBounds(641, 61, 195, 73);
 		add(lblStaffMenu);
 		
 		JButton btnBack = new JButton("Back");
+		btnBack.setFont(new Font("Tahoma", Font.PLAIN, 30));
 		btnBack.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				main.showStaffLoginScreen();
 			}
 		});
-		btnBack.setBounds(73, 237, 115, 29);
+		btnBack.setBounds(496, 561, 115, 29);
 		add(btnBack);
 	} 
 }
