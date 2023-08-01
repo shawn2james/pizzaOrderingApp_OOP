@@ -7,9 +7,12 @@ import javax.swing.JFrame;
 import data.Item;
 import data.Order;
 import gui.CustomizeScreen;
+import gui.InventoryScreen;
 import gui.MenuScreen;
+import gui.OrderScreen;
 import gui.SelectionScreen;
 import gui.StaffLoginScreen;
+import gui.StaffMainScreen;
 import gui.ViewCartScreen;
 
 public class MainFrame extends JFrame {
@@ -56,10 +59,13 @@ public class MainFrame extends JFrame {
 	}
 
 	public void showOrderScreen() { 
-		// TODO Auto-generated method
+		
 	 }
 
 	public void showStaffMainScreen() { 
+		StaffMainScreen s6 = new StaffMainScreen(this);
+		this.add(s6, "StaffMenu");
+		this.card.show(this.getContentPane(), "StaffMenu");
 		
 	 }
 
@@ -70,7 +76,9 @@ public class MainFrame extends JFrame {
 	 }
 
 	public void showInventoryScreen() { 
-		// TODO Auto-generated method
+		InventoryScreen s7 = new InventoryScreen(this);
+		this.add(s7, "InventoryScreen");
+		this.card.show(this.getContentPane(),"InventoryScreen" );
 	 }
 
 	public void showMenuScreen() { 

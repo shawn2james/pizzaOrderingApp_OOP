@@ -31,7 +31,7 @@ public class SelectionScreen extends JPanel {
 		JButton btnStaff = new JButton("Staff");
 		btnStaff.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				main.showStaffLoginScreen();
+				main.showStaffMainScreen();
 			}
 		});
 		btnStaff.setFont(new Font("Tahoma", Font.BOLD, 24));
