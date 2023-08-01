@@ -1,10 +1,19 @@
 package data;
 
-import java.util.List;
+import java.util.Random;
 
 public class Inventory {
-	public int[] quantities = {10, 13, 25};
-	private String[] toppings = {"Cheese", "Pepperoni", "Bacon"};
+	private String[] toppings = {"Cheese", "Pepperoni", "Bacon", "Marinara Sauce", "Black Olives", "Mushroom", "Onion"};
+	private int[] quantities = new int[toppings.length];
+
+	public Inventory () {
+		Random rand = new Random();
+		for(int i=0; i<toppings.length; i++) {
+			this.quantities[i] = rand.nextInt(20);
+			this.quantities[i] += 20;
+		}
+	}
+
 
 	public int[] getQuantities() {
 	 	 return quantities; 

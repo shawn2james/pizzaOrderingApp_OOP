@@ -19,7 +19,6 @@ public class InventoryScreen extends JPanel{
 		this.main = main;
 		setLayout(null);
 		
-		
 		String[] toppings = main.getController().inventory.getToppings();
 		int[] quantities = main.getController().inventory.getQuantities();
 		JLabel toppingLbl;
@@ -27,29 +26,29 @@ public class InventoryScreen extends JPanel{
 		JButton minusBtn;
 		JLabel qtyLbl;
 		
-		int pos = 0;
+		int pos = 250;
 		for (int i = 0; i<toppings.length; i++){
-			toppingLbl = new JLabel(toppings[i]);
-			toppingLbl.setFont(new Font("Tahoma", Font.PLAIN, 19));
+			toppingLbl = new JLabel(toppings[i]+":");
+			toppingLbl.setFont(new Font("Tahoma", Font.BOLD, 17));
 			toppingLbl.setHorizontalAlignment(SwingConstants.LEFT);
-			toppingLbl.setBounds(0,pos,500,70);
+			toppingLbl.setBounds(700,pos,500,30);
 			add(toppingLbl);
 			
 			plusBtn = new JButton("+");
-			plusBtn.setBounds(308, pos, 115, 29);
+			plusBtn.setBounds(810, pos, 50, 30);
 			add(plusBtn);
 			
 			qtyLbl = new JLabel(String.valueOf(quantities[i]));
 			qtyLbl.setFont(new Font("Tahoma", Font.PLAIN, 19));
-			qtyLbl.setHorizontalAlignment(SwingConstants.LEFT);
-			qtyLbl.setBounds(400,pos,500,70);
+			qtyLbl.setHorizontalAlignment(SwingConstants.CENTER);
+			qtyLbl.setBounds(880,pos,50,30);
 			add(qtyLbl);
 			
 			minusBtn = new JButton("-");
-			minusBtn.setBounds(600, pos, 115, 29);
+			minusBtn.setBounds(950, pos, 50, 30);
 			add(minusBtn);
 			
-			pos+=50;			
+			pos+=100;			
 		};
 		
 		
@@ -59,26 +58,8 @@ public class InventoryScreen extends JPanel{
 				main.showStaffMainScreen();
 			}
 		});
-		btnBack.setBounds(74, 236, 115, 29);
+		btnBack.setBounds(1200, 800, 115, 29);
 		add(btnBack);
-		
-		
-		
-		JButton button_2 = new JButton("-");
-		button_2.setBounds(175, 105, 115, 29);
-		add(button_2);
-		
-		JButton button_3 = new JButton("+");
-		button_3.setBounds(308, 104, 115, 29);
-		add(button_3);
-		
-		JButton button_5 = new JButton("+");
-		button_5.setBounds(308, 147, 115, 29);
-		add(button_5);
-		
-		JButton button_4 = new JButton("-");
-		button_4.setBounds(175, 147, 115, 29);
-		add(button_4);
 		
 		JLabel lblInventory = new JLabel("Inventory");
 		lblInventory.setHorizontalAlignment(SwingConstants.CENTER);

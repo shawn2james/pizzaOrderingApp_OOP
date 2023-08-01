@@ -34,7 +34,6 @@ public class StaffLoginScreen extends JPanel {
 				if(staff_username.equals(existingStaffs.get(i).getUsername())){
 					if(staff_password.equals(existingStaffs.get(i).getPassword())){
 						loginSuccessful = true; 					
-						
 						main.showStaffMainScreen();
 					}
 			}
