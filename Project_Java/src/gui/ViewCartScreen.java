@@ -1,7 +1,10 @@
 package gui;
 
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JLabel;
+
+import java.awt.BorderLayout;
 import java.awt.Font;
 import java.util.Vector;
 
@@ -130,5 +133,9 @@ public class ViewCartScreen extends JPanel {
 		btnBack.setBounds(1200, pos+100, 141, 42);
 		add(btnBack);
 		
+		JScrollPane scrollPane = new JScrollPane();
+        scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_NEVER);
+        add(BorderLayout.CENTER, scrollPane);
 	}
 }

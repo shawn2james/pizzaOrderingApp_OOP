@@ -12,6 +12,7 @@ import gui.CustomizeScreen;
 import gui.MenuScreen;
 import gui.SelectionScreen;
 import gui.StaffLoginScreen;
+import gui.StaffMainScreen;
 import gui.ViewCartScreen;
 
 public class MainFrame extends JFrame {
@@ -61,7 +62,9 @@ public class MainFrame extends JFrame {
 	 }
 
 	public void showStaffMainScreen() { 
-		// TODO Auto-generated method
+		StaffMainScreen s6 = new StaffMainScreen(this);
+		this.add(s6, "StaffMain");
+		this.card.show(this.getContentPane(), "StaffMain");
 	 }
 
 	public void showStaffLoginScreen() { 

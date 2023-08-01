@@ -25,18 +25,24 @@ public class StaffLoginScreen extends JPanel {
 		JButton btnLogin = new JButton("Login");
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-			String staff_username = textField.getText();
-			String staff_password = textField_1.getText();
-			Vector<Staff> existingStaffs = main.getController().ds.getStaffs();
-			for(int i=0; i<existingStaffs.size(); i++){
-				if(staff_username == existingStaffs.get(i).getUsername()){
-					if(staff_password == existingStaffs.get(i).getPassword()){
-						main.showStaffMainScreen();
+				String staff_username = textField.getText();
+				String staff_password = textField_1.getText();
+				Vector<Staff> existingStaffs = main.getController().ds.getStaffs();
+				for(int i=0; i<existingStaffs.size(); i++){
+					System.out.println(existingStaffs.get(i).getUsername());
+					System.out.println(staff_username);
+					System.out.println(existingStaffs.get(i).getPassword());
+					System.out.println(staff_password);
+					if(staff_username == existingStaffs.get(i).getUsername()){
+						if(staff_password == existingStaffs.get(i).getPassword()){
+							main.showStaffMainScreen();
+							break;
+							}
+						}
+						
 					}
-			}
-					
-			}
-			}});
+				}
+			});
 		btnLogin.setBounds(247, 149, 115, 29);
 		add(btnLogin);
 		
