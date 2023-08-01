@@ -60,7 +60,7 @@ public class MainFrame extends JFrame {
 	 }
 
 	public void showStaffMainScreen() { 
-		// TODO Auto-generated method
+		
 	 }
 
 	public void showStaffLoginScreen() { 

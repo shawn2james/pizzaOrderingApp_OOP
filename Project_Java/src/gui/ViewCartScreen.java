@@ -23,9 +23,9 @@ public class ViewCartScreen extends JPanel {
 		setLayout(null);
 		
 		JLabel lblYourCart = new JLabel("Your Cart");
+		lblYourCart.setBounds(650, 50, 600, 40);
 		lblYourCart.setHorizontalAlignment(SwingConstants.CENTER);
 		lblYourCart.setFont(new Font("Berlin Sans FB Demi", Font.BOLD, 40));
-		lblYourCart.setBounds(650, 50, 600, 40);
 		add(lblYourCart);
 		
 		Vector<Item> currentItems = main.getController().currentOrder.getItems();
@@ -109,6 +109,7 @@ public class ViewCartScreen extends JPanel {
 		}
 		
 		JButton btnConfirm = new JButton("Confirm");
+		btnConfirm.setBounds(1500, 190, 141, 42);
 		btnConfirm.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				main.getController().ds.addOrder(main.getController().currentOrder);
@@ -117,17 +118,16 @@ public class ViewCartScreen extends JPanel {
 			}
 		});
 		btnConfirm.setFont(new Font("Tahoma", Font.PLAIN, 17));
-		btnConfirm.setBounds(1500, pos+100, 141, 42);
 		add(btnConfirm);
 		
 		JButton btnBack = new JButton("Back");
+		btnBack.setBounds(1200, 190, 141, 42);
 		btnBack.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				main.showMenuScreen();
 			}
 		});
 		btnBack.setFont(new Font("Tahoma", Font.PLAIN, 17));
-		btnBack.setBounds(1200, pos+100, 141, 42);
 		add(btnBack);
 		
 	}
