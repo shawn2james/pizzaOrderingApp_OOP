@@ -3,6 +3,8 @@ package gui;
 import javax.swing.JPanel;
 
 import controller.MainFrame;
+import data.Item;
+import data.Order;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -11,6 +13,7 @@ import javax.swing.JTextField;
 import controller.MainFrame;
 
 import java.awt.event.ActionListener;
+import java.util.Vector;
 import java.awt.List;
 import java.awt.event.ActionEvent;
 import java.awt.Font;
@@ -20,7 +23,6 @@ public class StaffMainScreen extends JPanel {
 	public StaffMainScreen(MainFrame main) {
 		this.main = main;
 		setLayout(null);
-		
 		
 		JButton btnViewInventory = new JButton("View Inventory");
 		btnViewInventory.setFont(new Font("Tahoma", Font.PLAIN, 30));
@@ -50,7 +52,17 @@ public class StaffMainScreen extends JPanel {
 		
 		JLabel lblTotalSales = new JLabel("Total Sales:");
 		lblTotalSales.setFont(new Font("Tahoma", Font.PLAIN, 25));
-		lblTotalSales.setBounds(454, 454, 272, 37);
+		lblTotalSales.setBounds(912, 237, 304, 37);
+		
+		Vector<Order> orders = main.getController().ds.getOrders();
+		double totalSales = 0;
+		for(int i=0; i<orders.size(); i++) {
+			Vector<Item> items = orders.get(i).getItems();
+			for(int j=0; j<items.size(); j++) {
+				totalSales += items.get(j).getPrice();
+			}
+		}
+		lblTotalSales.setText("Total sales: $" + totalSales);
 		add(lblTotalSales);
 		
 		JLabel lblStaffMenu = new JLabel("Staff Menu");
@@ -59,7 +71,7 @@ public class StaffMainScreen extends JPanel {
 		add(lblStaffMenu);
 		
 		JButton btnBack = new JButton("Log out");
-		btnBack.setFont(new Font("Tahoma", Font.PLAIN, 30));
+		btnBack.setFont(new Font("Tahoma", Font.PLAIN, 25));
 		btnBack.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				main.showStaffLoginScreen();
