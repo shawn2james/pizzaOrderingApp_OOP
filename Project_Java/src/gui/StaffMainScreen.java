@@ -31,7 +31,7 @@ public class StaffMainScreen extends JPanel {
 				main.showInventoryScreen();
 			}
 		});
-		btnViewInventory.setBounds(493, 251, 265, 29);
+		btnViewInventory.setBounds(454, 226, 304, 54);
 		add(btnViewInventory);
 		
 		JButton btnViewOrders = new JButton("View Orders");
@@ -41,16 +41,16 @@ public class StaffMainScreen extends JPanel {
 				main.showOrderScreen();
 			}
 		});
-		btnViewOrders.setBounds(493, 357, 265, 29);
+		btnViewOrders.setBounds(454, 332, 304, 54);
 		add(btnViewOrders);
 		
 		JLabel label = new JLabel("");
 		label.setBounds(75, 179, 69, 20);
 		add(label);
 		
-		JLabel lblTotalSales = new JLabel("Total Sales");
+		JLabel lblTotalSales = new JLabel("Total Sales:");
 		lblTotalSales.setFont(new Font("Tahoma", Font.PLAIN, 25));
-		lblTotalSales.setBounds(493, 471, 233, 20);
+		lblTotalSales.setBounds(454, 454, 272, 37);
 		add(lblTotalSales);
 		
 		JLabel lblStaffMenu = new JLabel("Staff Menu");
@@ -65,7 +65,7 @@ public class StaffMainScreen extends JPanel {
 				main.showStaffLoginScreen();
 			}
 		});
-		btnBack.setBounds(496, 561, 115, 29);
+		btnBack.setBounds(454, 536, 304, 61);
 		add(btnBack);
 	} 
 }

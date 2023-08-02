@@ -14,6 +14,9 @@ import javax.swing.JPasswordField;
 import java.awt.event.ActionListener;
 import java.util.Vector;
 import java.awt.event.ActionEvent;
+import java.awt.Font;
+import java.awt.Color;
+import javax.swing.SwingConstants;
 
 public class StaffLoginScreen extends JPanel {
 	private MainFrame main;
@@ -25,6 +28,7 @@ public class StaffLoginScreen extends JPanel {
 		setLayout(null);
 		
 		JButton btnLogin = new JButton("Login");
+		btnLogin.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			String staff_username = textField.getText();
@@ -42,40 +46,53 @@ public class StaffLoginScreen extends JPanel {
 			}
 			lblError.setVisible(!loginSuccessful);
 			}});
-		btnLogin.setBounds(247, 149, 115, 29);
+		btnLogin.setBounds(776, 382, 128, 37);
 		add(btnLogin);
 		
 		JButton btnBack = new JButton("Back");
+		btnBack.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		btnBack.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				main.showSelectionScreen();
 			}
 			}
 		);
-		btnBack.setBounds(86, 149, 115, 29);
+		btnBack.setBounds(599, 382, 115, 36);
 		add(btnBack);
 		
 		textField = new JTextField();
-		textField.setBounds(227, 29, 146, 26);
+		textField.setFont(new Font("Tahoma", Font.PLAIN, 19));
+		textField.setBounds(599, 199, 305, 37);
 		add(textField);
 		textField.setColumns(10);
 		
 		textField_1 = new JPasswordField();
-		textField_1.setBounds(227, 84, 146, 26);
+		textField_1.setFont(new Font("Tahoma", Font.PLAIN, 19));
+		textField_1.setBounds(599, 286, 305, 37);
 		add(textField_1);
 		textField_1.setColumns(10);
 		
-		JLabel label = new JLabel("Username");
-		label.setBounds(66, 32, 69, 20);
-		add(label);
+		JLabel lblUsername = new JLabel("Username:");
+		lblUsername.setFont(new Font("Tahoma", Font.PLAIN, 23));
+		lblUsername.setBounds(405, 203, 163, 20);
+		add(lblUsername);
 		
-		 lblError = new JLabel("Please check your Username or Password");
-		lblError.setBounds(86, 223, 305, 20);
+		 lblError = new JLabel("Please check your Username or Password!");
+		 lblError.setForeground(Color.RED);
+		 lblError.setFont(new Font("Tahoma", Font.PLAIN, 17));
+		lblError.setBounds(599, 478, 404, 20);
 		lblError.setVisible(false);
 		add(lblError);
 		
-		JLabel lblNewLabel_1 = new JLabel("Password");
-		lblNewLabel_1.setBounds(66, 87, 69, 20);
+		JLabel lblNewLabel_1 = new JLabel("Password:");
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 23));
+		lblNewLabel_1.setBounds(405, 294, 163, 20);
 		add(lblNewLabel_1);
+		
+		JLabel lblLogIn = new JLabel("Log in ");
+		lblLogIn.setHorizontalAlignment(SwingConstants.CENTER);
+		lblLogIn.setFont(new Font("Berlin Sans FB Demi", Font.BOLD, 40));
+		lblLogIn.setBounds(369, 46, 600, 40);
+		add(lblLogIn);
 	} 
 }
