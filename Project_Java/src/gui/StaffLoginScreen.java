@@ -9,6 +9,7 @@ import data.Staff;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
 
 import java.awt.event.ActionListener;
 import java.util.Vector;
@@ -17,7 +18,7 @@ import java.awt.event.ActionEvent;
 public class StaffLoginScreen extends JPanel {
 	private MainFrame main;
 	private JTextField textField;
-	private JTextField textField_1;
+	private JPasswordField textField_1;
 	private JLabel lblError;
 	public StaffLoginScreen(MainFrame main) {
 		this.main = main;
@@ -59,7 +60,7 @@ public class StaffLoginScreen extends JPanel {
 		add(textField);
 		textField.setColumns(10);
 		
-		textField_1 = new JTextField();
+		textField_1 = new JPasswordField();
 		textField_1.setBounds(227, 84, 146, 26);
 		add(textField_1);
 		textField_1.setColumns(10);

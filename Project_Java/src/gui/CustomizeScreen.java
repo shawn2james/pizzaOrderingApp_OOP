@@ -107,24 +107,28 @@ public class CustomizeScreen extends JPanel {
 			add(comboBox);
 			
 			String[] toppings = main.getController().inventory.getToppings();
+			int[] quantities = main.getController().inventory.getQuantities();
+
 			int pos = 250;
 			for(int i=0; i<toppings.length; i++) {
-				JCheckBox chkTopping = new JCheckBox(toppings[i]);
-				chkTopping.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent e) {
-						JCheckBox chkBox = (JCheckBox)(e.getSource());
-						if(chkBox.isEnabled()==true) {
-							if(!((Pizza)item).getToppings().contains(chkBox.getText()))
-							((Pizza) item).addTopping(chkBox.getText());
-						} else {
-							((Pizza) item).removeTopping(chkBox.getText());
+				if(quantities[i]!=0) {
+					JCheckBox chkTopping = new JCheckBox(toppings[i]);
+					chkTopping.addActionListener(new ActionListener() {
+						public void actionPerformed(ActionEvent e) {
+							JCheckBox chkBox = (JCheckBox)(e.getSource());
+							if(chkBox.isEnabled()==true) {
+								if(!((Pizza)item).getToppings().contains(chkBox.getText()))
+								((Pizza) item).addTopping(chkBox.getText());
+							} else {
+								((Pizza) item).removeTopping(chkBox.getText());
+							}
 						}
-					}
-				});
-				chkTopping.setFont(new Font("Tahoma", Font.BOLD, 25));
-				chkTopping.setBounds(750, pos, 200, 40);
-				pos += 50;
-				add(chkTopping);
+					});
+					chkTopping.setFont(new Font("Tahoma", Font.BOLD, 25));
+					chkTopping.setBounds(750, pos, 200, 40);
+					pos += 50;
+					add(chkTopping);
+				}
 			}
 			
 			JButton btnBack = new JButton("Back");
