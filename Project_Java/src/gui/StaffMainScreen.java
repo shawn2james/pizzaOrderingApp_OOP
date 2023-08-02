@@ -58,7 +58,7 @@ public class StaffMainScreen extends JPanel {
 		lblStaffMenu.setBounds(641, 61, 195, 73);
 		add(lblStaffMenu);
 		
-		JButton btnBack = new JButton("Back");
+		JButton btnBack = new JButton("Log out");
 		btnBack.setFont(new Font("Tahoma", Font.PLAIN, 30));
 		btnBack.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

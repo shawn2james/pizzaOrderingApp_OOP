@@ -35,8 +35,16 @@ public class InventoryScreen extends JPanel{
 			add(toppingLbl);
 			
 			plusBtn = new JButton("+");
+			plusBtn.putClientProperty("index", i);
 			plusBtn.setBounds(910, pos, 50, 30);
 			plusBtn.setFont(new Font("Tahoma", Font.PLAIN, 17));
+			plusBtn.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					JButton clickedBtn = (JButton)(e.getSource());
+					main.getController().inventory.add(toppings[(int)(clickedBtn.getClientProperty("index"))]);
+					main.showInventoryScreen();
+				}
+			});
 			add(plusBtn);
 			
 			qtyLbl = new JLabel(String.valueOf(quantities[i]));
@@ -46,8 +54,16 @@ public class InventoryScreen extends JPanel{
 			add(qtyLbl);
 			
 			minusBtn = new JButton("-");
+			minusBtn.putClientProperty("index", i);
 			minusBtn.setBounds(1050, pos, 50, 30);
 			minusBtn.setFont(new Font("Tahoma", Font.PLAIN, 17));
+			minusBtn.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					JButton clickedBtn = (JButton)(e.getSource());
+					main.getController().inventory.remove(toppings[(int)(clickedBtn.getClientProperty("index"))]);
+					main.showInventoryScreen();
+				}
+			});
 			add(minusBtn);
 			
 			pos+=50;			

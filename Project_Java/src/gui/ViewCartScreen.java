@@ -108,9 +108,8 @@ public class ViewCartScreen extends JPanel {
 					btnX.addActionListener(new ActionListener() {
 						public void actionPerformed(ActionEvent e) {
 							JButton clickedBtn = (JButton)(e.getSource());
-							System.out.println(clickedBtn.getClientProperty("item index"));
 							main.getController().currentOrder.removeItem((int)(clickedBtn.getClientProperty("item index")));
-							refresh();
+							main.showInventoryScreen();
 						}
 					});
 					add(btnX);
@@ -154,7 +153,7 @@ public class ViewCartScreen extends JPanel {
 							JButton clickedBtn = (JButton)(e.getSource());
 							System.out.println(clickedBtn.getClientProperty("item index"));
 							main.getController().currentOrder.removeItem((int)(clickedBtn.getClientProperty("item index")));
-							refresh();
+							main.showInventoryScreen();
 						}
 					});
 					add(btnX);
@@ -194,9 +193,5 @@ public class ViewCartScreen extends JPanel {
 				}
 			}
 		}
-	}
-	
-	public void refresh() {
-		main.showViewCartScreen();
 	}
 }
