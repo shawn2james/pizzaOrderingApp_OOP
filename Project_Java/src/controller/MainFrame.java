@@ -63,7 +63,9 @@ public class MainFrame extends JFrame {
 	}
 
 	public void showOrderScreen() { 
-		
+		OrderScreen s9 = new OrderScreen(this);
+		this.add(s9, "OrderScreen");
+		this.card.show(this.getContentPane(), "OrderScreen");
 	 }
 
 	public void showStaffMainScreen() { 
