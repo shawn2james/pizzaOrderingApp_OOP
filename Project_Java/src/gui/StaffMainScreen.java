@@ -9,6 +9,7 @@ import data.Order;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+import java.lang.Math;
 
 import controller.MainFrame;
 
@@ -67,7 +68,7 @@ public class StaffMainScreen extends JPanel {
 		
 		JLabel lblStaffMenu = new JLabel("Staff Menu");
 		lblStaffMenu.setFont(new Font("Tahoma", Font.BOLD, 35));
-		lblStaffMenu.setBounds(641, 61, 195, 73);
+		lblStaffMenu.setBounds(641, 61, 195, 200);
 		add(lblStaffMenu);
 		
 		JButton btnBack = new JButton("Log out");

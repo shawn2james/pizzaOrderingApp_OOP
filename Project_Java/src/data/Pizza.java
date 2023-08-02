@@ -32,4 +32,14 @@ public class Pizza extends Item {
 	public void removeTopping(String topping) {
 		this.toppings.remove(topping);
 	}
+
+	@Override
+	public double getPrice() {
+		double actualPrice;
+		if(getSize()=="S") actualPrice = getPrices()[0];
+		else if(getSize()=="M") actualPrice = getPrices()[1];
+		else actualPrice = getPrices()[2];
+		
+		return actualPrice + getToppings().size();
+	}
 }

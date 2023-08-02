@@ -22,4 +22,15 @@ public class Drink extends Item {
 		 this.iceLevel = iceLevel; 
 	} 
 
+	@Override
+	public double getPrice() {
+		double actualPrice;
+		if(getSize()=="S") actualPrice = getPrices()[0];
+		else if(getSize()=="M") actualPrice = getPrices()[1];
+		else actualPrice = getPrices()[2];
+		
+		if(iceLevel=="No ice") return actualPrice+1;
+		else if(iceLevel=="Less ice") return actualPrice+0.50;
+		else return actualPrice;
+	}
 }

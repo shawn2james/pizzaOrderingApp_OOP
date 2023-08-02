@@ -46,18 +46,20 @@ public class MenuScreen extends JPanel {
 	    JPanel pizzasTab = new JPanel( );
 	    Pizza[] pizzas = main.getController().getAllPizzas();
 		JButton[] pizzaButtons  = new JButton[pizzas.length];
+		JLabel[] priceLabels  = new JLabel[pizzas.length];
 		JButton btnPizza;
 		int pos = 0;
 		for(int i=0; i<pizzas.length; i++) {
-			btnPizza = new JButton(pizzas[i].getName());
+			btnPizza = new JButton("<html>"+pizzas[i].getName() + "                                <br>" + Double.toString(pizzas[i].getPrice())+"</html>");
+			btnPizza.putClientProperty("name", pizzas[i].getName());
 			btnPizza.setFont(new Font("Tahoma", Font.PLAIN, 19));
 			btnPizza.setHorizontalAlignment(SwingConstants.LEFT);
-			btnPizza.setBounds(0, pos, 903, 90);
+			btnPizza.setBounds(0, pos, 700, 90);
 			btnPizza.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					JButton clickedBtn = (JButton)(e.getSource());
 					for (int i=0; i<pizzas.length; i++) {
-						if (pizzas[i].getName() == clickedBtn.getText()) {
+						if (pizzas[i].getName() == clickedBtn.getClientProperty("name")) {
 							main.showCustomizeScreen(pizzas[i]);
 						}
 					}
@@ -67,10 +69,7 @@ public class MenuScreen extends JPanel {
 			pos += 90;
 		}
 		
-		for (int i = 0; i < pizzaButtons.length; i++) 
-		{
-		    pizzasTab.add(pizzaButtons[i]);
-		}
+		for (int i = 0; i < pizzaButtons.length; i++) pizzasTab.add(pizzaButtons[i]);
 		
 		JPanel drinksTab = new JPanel( );
 	    Drink[] drinks = main.getController().getAllDrinks();
@@ -78,7 +77,8 @@ public class MenuScreen extends JPanel {
 		JButton btnDrink;
 		pos = 0;
 		for(int i=0; i<drinks.length; i++) {
-			btnDrink = new JButton(drinks[i].getName());
+			btnDrink = new JButton("<html>"+drinks[i].getName() + "                                <br>" + Double.toString(drinks[i].getPrice())+"</html>");
+			btnDrink.putClientProperty("name", drinks[i].getName());
 			btnDrink.setFont(new Font("Tahoma", Font.PLAIN, 19));
 			btnDrink.setHorizontalAlignment(SwingConstants.LEFT);
 			btnDrink.setBounds(0, pos, 903, 90);
@@ -86,7 +86,7 @@ public class MenuScreen extends JPanel {
 				public void actionPerformed(ActionEvent e) {
 					JButton clickedBtn = (JButton)(e.getSource());
 					for (int i=0; i<drinks.length; i++) {
-						if (drinks[i].getName() == clickedBtn.getText()) {
+						if (drinks[i].getName() == clickedBtn.getClientProperty("name")) {
 							main.showCustomizeScreen(drinks[i]);
 						}
 					}
