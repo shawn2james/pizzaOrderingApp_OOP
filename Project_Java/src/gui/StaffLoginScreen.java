@@ -21,6 +21,7 @@ import java.awt.event.ActionEvent;
 import java.awt.Font;
 import java.awt.Color;
 import javax.swing.SwingConstants;
+import javax.swing.SwingUtilities;
 
 public class StaffLoginScreen extends JPanel {
 	private MainFrame main;
@@ -29,6 +30,9 @@ public class StaffLoginScreen extends JPanel {
 	private JLabel lblError;
 	public StaffLoginScreen(MainFrame main) {
 		this.main = main;
+		
+		  
+		
 		setLayout(null);
 		
 		
@@ -64,6 +68,16 @@ public class StaffLoginScreen extends JPanel {
 		);
 		btnBack.setBounds(599, 382, 115, 36);
 		add(btnBack);
+
+		
+		
+		SwingUtilities.invokeLater(new Runnable() {
+		    public void run() {
+		        textField.requestFocusInWindow();
+		    }
+		});
+		
+
 		
 		textField = new JTextField();
 		textField.setFont(new Font("Tahoma", Font.PLAIN, 19));
@@ -80,6 +94,8 @@ public class StaffLoginScreen extends JPanel {
 			public void keyPressed(KeyEvent e) {}
 		});
 		
+		textField.requestFocusInWindow();
+		
 		textField_1 = new JPasswordField();
 		textField_1.setFont(new Font("Tahoma", Font.PLAIN, 19));
 		textField_1.setBounds(599, 286, 305, 37);
@@ -95,17 +111,15 @@ public class StaffLoginScreen extends JPanel {
 			public void keyPressed(KeyEvent e) {}
 		});
 		
-		
-		
 		JLabel lblUsername = new JLabel("Username:");
 		lblUsername.setFont(new Font("Tahoma", Font.PLAIN, 23));
 		lblUsername.setBounds(405, 203, 163, 20);
 		add(lblUsername);
-		
+
 		lblError = new JLabel("Please check your Username or Password!");
 		lblError.setForeground(Color.RED);
 		lblError.setFont(new Font("Tahoma", Font.PLAIN, 17));
-		lblError.setBounds(599, 478, 404, 20);
+		lblError.setBounds(599, 478, 438, 20);
 		lblError.setVisible(false);
 		add(lblError);
 		

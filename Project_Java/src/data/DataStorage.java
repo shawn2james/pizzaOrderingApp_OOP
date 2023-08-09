@@ -64,19 +64,19 @@ public class DataStorage {
 	}
 
 	public void removeOrder(Order order) { 
-		// TODO Auto-generated method
+		
 	 }
 
 	public void addMenuItem(Item newItem) { 
-		// TODO Auto-generated method
+	
 	 }
 
 	public void editOrder(int orderNo, Order newOrder) { 
-		// TODO Auto-generated method
+		
 	 }
 
 	public double getTotalSales() { 
-		// TODO Auto-generated method
+	
 		return 0;
 	 }
 	
@@ -85,7 +85,7 @@ public class DataStorage {
 	}
 
 	public void removeMenuItem(Item item) { 
-		// TODO Auto-generated method
+	
 	 } 
 
 }

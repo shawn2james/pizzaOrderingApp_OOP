@@ -77,7 +77,7 @@ public class MenuScreen extends JPanel {
 		JButton btnDrink;
 		pos = 0;
 		for(int i=0; i<drinks.length; i++) {
-			btnDrink = new JButton("<html>"+drinks[i].getName() + "                                <br>" + Double.toString(drinks[i].getPrice())+"</html>");
+			btnDrink = new JButton("<html>"+drinks[i].getName() + "<br>" + Double.toString(drinks[i].getPrice())+"</html>");
 			btnDrink.putClientProperty("name", drinks[i].getName());
 			btnDrink.setFont(new Font("Tahoma", Font.PLAIN, 19));
 			btnDrink.setHorizontalAlignment(SwingConstants.LEFT);
