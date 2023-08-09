@@ -12,6 +12,10 @@ import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.util.Vector;
 import java.awt.event.ActionEvent;
 import java.awt.Font;
@@ -26,6 +30,7 @@ public class StaffLoginScreen extends JPanel {
 	public StaffLoginScreen(MainFrame main) {
 		this.main = main;
 		setLayout(null);
+		
 		
 		JButton btnLogin = new JButton("Login");
 		btnLogin.setFont(new Font("Tahoma", Font.PLAIN, 20));
@@ -65,21 +70,41 @@ public class StaffLoginScreen extends JPanel {
 		textField.setBounds(599, 199, 305, 37);
 		add(textField);
 		textField.setColumns(10);
+		textField.addKeyListener(new KeyListener() {
+			public void keyTyped(KeyEvent e) {}
+			public void keyReleased(KeyEvent e) {
+				if(e.getKeyCode()==KeyEvent.VK_ENTER) {
+					btnLogin.doClick();
+				}
+			}
+			public void keyPressed(KeyEvent e) {}
+		});
 		
 		textField_1 = new JPasswordField();
 		textField_1.setFont(new Font("Tahoma", Font.PLAIN, 19));
 		textField_1.setBounds(599, 286, 305, 37);
 		add(textField_1);
 		textField_1.setColumns(10);
+		textField_1.addKeyListener(new KeyListener() {
+			public void keyTyped(KeyEvent e) {}
+			public void keyReleased(KeyEvent e) {
+				if(e.getKeyCode()==KeyEvent.VK_ENTER) {
+					btnLogin.doClick();
+				}
+			}
+			public void keyPressed(KeyEvent e) {}
+		});
+		
+		
 		
 		JLabel lblUsername = new JLabel("Username:");
 		lblUsername.setFont(new Font("Tahoma", Font.PLAIN, 23));
 		lblUsername.setBounds(405, 203, 163, 20);
 		add(lblUsername);
 		
-		 lblError = new JLabel("Please check your Username or Password!");
-		 lblError.setForeground(Color.RED);
-		 lblError.setFont(new Font("Tahoma", Font.PLAIN, 17));
+		lblError = new JLabel("Please check your Username or Password!");
+		lblError.setForeground(Color.RED);
+		lblError.setFont(new Font("Tahoma", Font.PLAIN, 17));
 		lblError.setBounds(599, 478, 404, 20);
 		lblError.setVisible(false);
 		add(lblError);
