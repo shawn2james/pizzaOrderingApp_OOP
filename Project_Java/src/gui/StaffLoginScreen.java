@@ -1,7 +1,9 @@
 package gui;
 
 import javax.swing.JFrame;
+import javax.swing.AbstractButton;
 import javax.swing.JButton;
+import javax.swing.JCheckBox;
 import javax.swing.JTextField;
 
 import controller.MainFrame;
@@ -24,6 +26,7 @@ public class StaffLoginScreen extends JPanel {
 	private JTextField textField;
 	private JPasswordField textField_1;
 	private JLabel lblError;
+	private AbstractButton showPasswordCheckBox;
 	public StaffLoginScreen(MainFrame main) {
 		this.main = main;
 		
@@ -46,10 +49,23 @@ public class StaffLoginScreen extends JPanel {
 						main.showStaffMainScreen();
 					}
 			}
-					
+			
 			}
 			lblError.setVisible(!loginSuccessful);
 			}});
+		
+		showPasswordCheckBox = new JCheckBox("Show Password");
+		showPasswordCheckBox.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		showPasswordCheckBox.setBounds(599, 336, 150, 25);
+		add(showPasswordCheckBox);
+		showPasswordCheckBox.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				JCheckBox checkBox = (JCheckBox) e.getSource();
+				textField_1.setEchoChar(checkBox.isSelected()? '\0' : '*');
+				
+				
+			}
+		});
 		btnLogin.setBounds(776, 382, 128, 37);
 		add(btnLogin);
 		
