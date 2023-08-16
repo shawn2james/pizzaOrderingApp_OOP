@@ -99,6 +99,7 @@ public class ViewCartScreen extends JPanel {
 					lblItemName.setHorizontalAlignment(SwingConstants.LEFT);
 					lblItemName.setFont(new Font("Berlin Sans FB Demi", Font.BOLD, 25));
 					add(lblItemName);
+				
 					
 					btnX = new JButton("X");
 					btnX.putClientProperty("item index", i);
@@ -109,11 +110,22 @@ public class ViewCartScreen extends JPanel {
 						public void actionPerformed(ActionEvent e) {
 							JButton clickedBtn = (JButton)(e.getSource());
 							main.getController().currentOrder.removeItem((int)(clickedBtn.getClientProperty("item index")));
-							main.showInventoryScreen();
+							main.showMenuScreen();
 						}
 					});
 					add(btnX);
 					pos += 30;
+					
+					double totalPrice = 0.0;
+			        for (Item item : currentItems) {
+			            totalPrice += item.getPrice();
+			        }
+			            
+			        JLabel lblTotalPrice = new JLabel("Total Price: $" + totalPrice);
+			        lblTotalPrice.setBounds(1200, pos, 300, 100); 
+			        lblTotalPrice.setHorizontalAlignment(SwingConstants.RIGHT);
+			        lblTotalPrice.setFont(new Font("Tahoma", Font.BOLD, 25));
+			        add(lblTotalPrice);
 					
 					lblSize = new JLabel("Size: " + drink.getSize());
 					lblSize.setBounds(150, pos, 300, 100);
@@ -153,7 +165,7 @@ public class ViewCartScreen extends JPanel {
 							JButton clickedBtn = (JButton)(e.getSource());
 							System.out.println(clickedBtn.getClientProperty("item index"));
 							main.getController().currentOrder.removeItem((int)(clickedBtn.getClientProperty("item index")));
-							main.showInventoryScreen();
+							main.showMenuScreen();
 						}
 					});
 					add(btnX);

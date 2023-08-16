@@ -75,7 +75,7 @@ public class StaffMainScreen extends JPanel {
 		btnBack.setFont(new Font("Tahoma", Font.PLAIN, 25));
 		btnBack.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				main.showStaffLoginScreen();
+				main.showSelectionScreen();
 			}
 		});
 		btnBack.setBounds(454, 536, 304, 61);
